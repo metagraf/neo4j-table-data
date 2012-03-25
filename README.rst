@@ -27,5 +27,5 @@ Make sure you are in the program folder.
 
 ::
 
-  python neo4j-table-data.py
+  python import-nodes.py -i data.csv -o database
 
