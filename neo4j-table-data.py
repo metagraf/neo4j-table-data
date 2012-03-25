@@ -7,8 +7,8 @@
 # Updated: 2012-03-25
 
 # TODO
-# -
-# -
+# - add support for csv module
+# - 
 # -
 
 from neo4j import GraphDatabase

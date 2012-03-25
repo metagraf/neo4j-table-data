@@ -1,7 +1,7 @@
 neo4j-table-data
 ================
 
-neo4j-table-data is a python application to import structured table data into a neo4j database.
+An application written in python to import structured table data into a neo4j database.
 
 Prerequisites
 -------------
