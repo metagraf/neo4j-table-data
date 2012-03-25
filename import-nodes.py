@@ -6,14 +6,7 @@
 # Created: 2012-03-25
 # Updated: 2012-03-25
 
-# TODO
-# - add support for csv module
-# - warning before writing to a non-empty database
-# - add the possibility to create relations and multiple nodes per line
-# - allow specifying of which columns are the node identifiers, which coulums should be parameters on the nodes, which should be parameters on the relations and how to name and specify relations.
-# - Perhaps convert to REST-bindings instead of embedded to be usable on e.g. Heroku? (I don't think they use embedded there, but not sure)
-
-# OPTIONS - either one can set the options here or with the command line arguments
+# OPTIONS (also ok to use command line arguments)
 input = None  # structured data file to read
 output = None # neo4j database folder
 
