@@ -8,8 +8,10 @@
 
 # TODO
 # - add support for csv module
-# - 
-# -
+# - warning before writing to a non-empty database
+# - add the possibility to create relations and multiple nodes per line
+# - allow specifying of which columns are the node identifiers, which coulums should be parameters on the nodes, which should be parameters on the relations and how to name and specify relations.
+# - Perhaps convert to REST-bindings instead of embedded to be usable on e.g. Heroku? (I don't think they use embedded there, but not sure)
 
 from neo4j import GraphDatabase
 import csv, getopt, sys
