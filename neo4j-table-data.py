@@ -24,6 +24,7 @@ def main():
 		print str(err) # will print something like "option -a not recognized"
 		usage()
 		sys.exit(2)
+	input = None
 	output = None
 	verbose = False
 	for o, a in opts:
@@ -44,7 +45,7 @@ def main():
 		usage()
 		sys.exit()
 	
-	#If everything above is OK, then run program	
+	#If everything is OK then run program	
 	run(input, output)
 		
 def usage():
