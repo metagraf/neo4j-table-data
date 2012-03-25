@@ -13,10 +13,14 @@
 # - allow specifying of which columns are the node identifiers, which coulums should be parameters on the nodes, which should be parameters on the relations and how to name and specify relations.
 # - Perhaps convert to REST-bindings instead of embedded to be usable on e.g. Heroku? (I don't think they use embedded there, but not sure)
 
+# OPTIONS - either one can set the options here or with the command line arguments
+input = None  # structured data file to read
+output = None # neo4j database folder
+
 from neo4j import GraphDatabase
 import csv, getopt, sys
 
-def main():
+def main(input, output):
 	''' The main method takes care of the option parameters, 
 	for more information on how getopt works 
 	please read http://www.doughellmann.com/PyMOTW/getopt/ '''
@@ -26,8 +30,6 @@ def main():
 		print str(err) # will print something like "option -a not recognized"
 		usage()
 		sys.exit(2)
-	input = None
-	output = None
 	verbose = False
 	for o, a in opts:
 		if o == "-v":
@@ -42,12 +44,12 @@ def main():
 		else:
 			assert False, "unhandled option"
 
-	if input == None or output == None: #requires input and output file
+	if input == None or output == None: # requires input and output file
 		print("Options -i and -o are both required, see help below.")
 		usage()
 		sys.exit()
 	
-	#If everything is OK then run program	
+	# If everything is OK then run program	
 	run(input, output)
 		
 def usage():
@@ -57,11 +59,11 @@ def usage():
 Help/information
 =========================================================================
 	Example:
-		python neo4j-table-data.py -i indata.csv -o outdata.csv
+		python neo4j-table-data.py -i indata.csv -o mydatabase
 		
 	Options: 
-		-i input file
-		-o output file
+		-i input, structured data file to read
+		-o output, neo4j database folder
 		-h help
 		-v verbose
 =========================================================================
@@ -69,14 +71,13 @@ Help/information
 	
 def run(input, output):
 	''' Runs program '''
-	print("Input file: " + str(input))
-	print("Output file: " + str(output))
+	print("Input: " + str(input))
+	print("Output: " + str(output))
 	
 if __name__ == "__main__":
-	''' Constructor '''
-	main()
-
-
-
+	''' Constructor; if = runs as script / else = runs as module '''	
+	main(input, output)
+else:
+	pass
 
 
