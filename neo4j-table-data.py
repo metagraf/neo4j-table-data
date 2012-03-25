@@ -21,7 +21,6 @@ def main():
 	try:
 		opts, args = getopt.getopt(sys.argv[1:], "hi:o:v", ["help", "input=","output="])
 	except getopt.GetoptError, err:
-		# print help information and exit:
 		print str(err) # will print something like "option -a not recognized"
 		usage()
 		sys.exit(2)
@@ -40,12 +39,39 @@ def main():
 		else:
 			assert False, "unhandled option"
 
+	if input == None or output == None: #requires input and output file
+		print("Options -i and -o are both required, see help below.")
+		usage()
+		sys.exit()
+	
+	#If everything above is OK, then run program	
+	run(input, output)
+		
+def usage():
+	''' Print help/information on how the program is to be used '''
+	print('''
+=========================================================================
+Help/information
+=========================================================================
+	Example:
+		python neo4j-table-data.py -i indata.csv -o outdata.csv
+		
+	Options: 
+		-i input file
+		-o output file
+		-h help
+		-v verbose
+=========================================================================
+	''')
+	
+def run(input, output):
+	''' Runs program '''
 	print("Input file: " + str(input))
 	print("Output file: " + str(output))
 	
 if __name__ == "__main__":
+	''' Constructor '''
 	main()
-
 
 
 
