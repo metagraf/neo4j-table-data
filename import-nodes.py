@@ -79,18 +79,30 @@ def import_data(csv_file, database):
 	''' Import data from CSV to neo4j database '''
 	
 	file_list = csv.reader(open(csv_file, 'rb'), delimiter=';', quotechar='|')
-	
-	node_attr_list = [] # create empty attribute list
+		
+	# Create node index
+	#  See http://docs.neo4j.org/chunked/snapshot/python-embedded-reference-indexes.html
+	#  TODO Check if exists: exists = db.node.indexes.exists('my_nodes')
+	with database.transaction:
+		node_idx = database.node.indexes.create('my_nodes')
+		
+	node_attr_list = [] # create empty attribute list				
 	i = 0
 	for row in file_list: # loop each row in file
-		if i == 0: # if header
+		if i == 0: # header row
+		
 			for col in row:
-				node_attr_list.append(col) # save attribute names from header
+				node_attr_list.append(col) # save attribute names from first row
+				
 		else:
 			with database.transaction:
 				new_node = database.node()
 				for col_num in range(len(node_attr_list)):
 					new_node[node_attr_list[col_num]] = row[col_num]
+					
+				# Add the node to the index
+				index_col_num = 0 # first column will be indexed
+				node_idx[node_attr_list[index_col_num]][row[index_col_num]] = new_node
 		i += 1
 		
 	print(str(i) + ' nodes were successfully added to the database.')

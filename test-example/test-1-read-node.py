@@ -7,7 +7,7 @@ from neo4j import GraphDatabase
 db = GraphDatabase('test.db')
 
 #read
-a_node = db.node[150]
+a_node = db.node[97]
 print(a_node)
 
 # Loop property values
