@@ -37,39 +37,65 @@ def main(input, output):
 	for more information on how getopt works 
 	please read http://www.doughellmann.com/PyMOTW/getopt/ '''
 	try:
-		opts, args = getopt.getopt(sys.argv[1:], "hi:o:v", ["help", "input=","output="])
+		opts, args = getopt.getopt(sys.argv[1:], 'hi:o:v', ['help', 'input=','output='])
 	except getopt.GetoptError, err:
-		print str(err) # will print something like "option -a not recognized"
+		print str(err) # will print something like 'option -a not recognized'
 		usage()
 		sys.exit(2)
 	verbose = False
 	for o, a in opts:
-		if o == "-v":
+		if o == '-v':
 			verbose = True
-		elif o in ("-h", "--help"):
+		elif o in ('-h', '--help'):
 			usage()
 			sys.exit()
-		elif o in ("-i", "--input"):
+		elif o in ('-i', '--input'):
 			input = a
-		elif o in ("-o", "--output"):
+		elif o in ('-o', '--output'):
 			output = a
 		else:
-			assert False, "unhandled option"
+			assert False, 'unhandled option'
 
 	if input == None or output == None: # requires input and output file
-		print("Options -i and -o are both required, see help below.")
+		print('Options -i and -o are both required, see help below.')
 		usage()
 		sys.exit()
 	
-	# If everything is OK then run program	
-	run(input, output)
+	#create neo4j database
+	db = create_database(output)
 	
-def run(input, output):
-	''' Runs program '''
-	print("Input: " + str(input))
-	print("Output: " + str(output))
+	#import data to neo4j database
+	import_data(input, db)
+
+	#shutdown database
+	db.shutdown()
+
+def create_database(database_name):	
+	''' Create neo4j database '''
+	db_obj = GraphDatabase(database_name)    
+	return db_obj
 	
-if __name__ == "__main__":
+def import_data(csv_file, database):
+	''' Import data from CSV to neo4j database '''
+	
+	file_list = csv.reader(open(csv_file, 'rb'), delimiter=';', quotechar='|')
+	
+	node_attr_list = [] # create empty attribute list
+	i = 0
+	for row in file_list: # loop each row in file
+		if i == 0: # if header
+			for col in row:
+				node_attr_list.append(col) # save attribute names from header
+		else:
+			with database.transaction:
+				new_node = database.node()
+				for col_num in range(len(node_attr_list)):
+					new_node[node_attr_list[col_num]] = row[col_num]
+		i += 1
+		
+	print(str(i) + ' nodes were successfully added to the database.')
+
+if __name__ == '__main__':
 	''' Constructor; if = runs as script / else = runs as module '''	
 	main(input, output)
 else:
