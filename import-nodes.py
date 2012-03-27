@@ -9,6 +9,24 @@
 # DEFAULT OPTIONS
 options = {'input': None, 'output': None}
 
+# HELP TEXT
+help = '''
+=========================================================================
+Help/information
+=========================================================================
+	This is a script to import nodes from CSV to a neo4j database
+	
+	Example:
+		python neo4j-table-data.py -i indata.csv -o mydatabase
+		
+	Options: 
+		-i input, structured data file to read
+		-o output, neo4j database folder
+		-h help
+		-v verbose
+=========================================================================
+'''
+
 from neo4j import GraphDatabase
 import csv, getopt, sys
 
@@ -35,22 +53,7 @@ def main(options):
 def usage():
 	''' Print help/information on how the program is to be used '''
 
-	print('''
-=========================================================================
-Help/information
-=========================================================================
-	This is a script to import nodes from CSV to a neo4j database
-	
-	Example:
-		python neo4j-table-data.py -i indata.csv -o mydatabase
-		
-	Options: 
-		-i input, structured data file to read
-		-o output, neo4j database folder
-		-h help
-		-v verbose
-=========================================================================
-	''')
+	print(help)
 
 def parameters(options):
 	''' Check if there are any optional command line parameters '''	
