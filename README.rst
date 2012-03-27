@@ -3,7 +3,7 @@ neo4j-table-data
 
 An application written in python to import structured table data (eg. CSV files) into a neo4j database.
 
-Read more about neo4j here: http://neo4j.org/.
+Read more about neo4j here: http://neo4j.org/
 
 Prerequisites
 -------------
