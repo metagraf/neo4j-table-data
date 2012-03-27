@@ -4,18 +4,37 @@
 # Author(s): Thomas Reinholdsson <reinholdsson@gmail.com>
 # Info: https://github.com/reinholdsson/neo4j-table-data
 # Created: 2012-03-25
-# Updated: 2012-03-25
+# Updated: 2012-03-28
 
-# OPTIONS (also ok to use command line arguments)
+# DEFAULT OPTIONS
 options = {'input': None, 'output': None}
-input = None  # structured data file to read
-output = None # neo4j database folder
 
 from neo4j import GraphDatabase
 import csv, getopt, sys
 
+def main(options):
+	''' Main program '''	
+
+	try:
+		# Add command line parameters if any
+		options = parameters(options)
+		
+		# Create neo4j database
+		db = create_database(options['output'])
+		
+		# Import data to neo4j database
+		import_data(options['input'], db)
+			
+		# Shutdown database
+		db.shutdown()
+	except:
+		pass # handle some exceptions
+	else:
+		return 0 # exit errorlessly
+
 def usage():
 	''' Print help/information on how the program is to be used '''
+
 	print('''
 =========================================================================
 Help/information
@@ -33,10 +52,9 @@ Help/information
 =========================================================================
 	''')
 
-#def options(input, output):
+def parameters(options):
+	''' Check if there are any optional command line parameters '''	
 
-def main(input, output):
-	''' Handles option parameters as well as  '''
 	try:
 		opts, args = getopt.getopt(sys.argv[1:], 'hi:o:v', ['help', 'input=','output='])
 	except getopt.GetoptError, err:
@@ -51,29 +69,25 @@ def main(input, output):
 			usage()
 			sys.exit()
 		elif o in ('-i', '--input'):
-			input = a
+			options['input'] = a
 		elif o in ('-o', '--output'):
-			output = a
+			options['output'] = a
 		else:
 			assert False, 'unhandled option'
 
-	if input == None or output == None: # requires input and output file
+	if options['input'] == None or options['output'] == None: # requires input and output file
 		print('Options -i and -o are both required, see help below.')
 		usage()
 		sys.exit()
-	
-	#create neo4j database
-	db = create_database(output)
-	
-	#import data to neo4j database
-	import_data(input, db)
-
-	#shutdown database
-	db.shutdown()
+		
+	return options
 
 def create_database(database_name):	
 	''' Create neo4j database '''
-	db_obj = GraphDatabase(database_name)    
+	
+	# Create or open neo4j database
+	db_obj = GraphDatabase(database_name)
+	
 	return db_obj
 	
 def import_data(csv_file, db):
@@ -116,10 +130,9 @@ def import_data(csv_file, db):
 	print "### Num of nodes ###\nBefore: %s\nAdded : %s\nAfter : %s"\
 		% (num_of_nodes_before, num_of_nodes_added, num_of_nodes_after)
 
-if __name__ == '__main__':
-	''' Constructor; if = runs as script / else = runs as module '''	
-	main(input, output)
-else:
-	pass
+
+if __name__ == '__main__':	
+	main(options)
+
 
 
