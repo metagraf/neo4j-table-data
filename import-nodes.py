@@ -102,7 +102,6 @@ def import_data(csv_file, db):
 	file_list = csv.reader(open(csv_file, 'rb'), delimiter=';', quotechar='|')
 	
 	# Count number of nodes (TODO: Option to deactive, might be slow with big data)
-	#num_of_nodes_before = len(db.nodes)
 	num_of_nodes = {'before': len(db.nodes)}
 	
 	# We perform changes from within transactions - either write all or none
@@ -130,7 +129,6 @@ def import_data(csv_file, db):
 					node_idx[node_attr_list[index_col_num]][row[index_col_num]] = new_node
 	
 	# Count number of successfully added nodes
-	#num_of_nodes_after = len(db.nodes)
 	num_of_nodes['after'] = len(db.nodes)
 	num_of_nodes['added'] = num_of_nodes['after'] - num_of_nodes['before']	
 	
