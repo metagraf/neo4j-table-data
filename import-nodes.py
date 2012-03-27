@@ -45,8 +45,9 @@ def main(options):
 			
 		# Shutdown database
 		db.shutdown()
-	except:
-		pass # handle some exceptions
+	except getopt.GetoptError, err:
+		print str(err)
+		#pass # handle some exceptions
 	else:
 		return 0 # exit errorlessly
 
@@ -88,6 +89,8 @@ def parameters(options):
 def create_database(database_name):	
 	''' Create neo4j database '''
 	
+	# TODO: Add db.shutdown() on error (try, except, else)?
+	
 	# Create or open neo4j database
 	db_obj = GraphDatabase(database_name)
 	
@@ -99,7 +102,8 @@ def import_data(csv_file, db):
 	file_list = csv.reader(open(csv_file, 'rb'), delimiter=';', quotechar='|')
 	
 	# Count number of nodes (TODO: Option to deactive, might be slow with big data)
-	num_of_nodes_before = len(db.nodes)
+	#num_of_nodes_before = len(db.nodes)
+	num_of_nodes = {'before': len(db.nodes)}
 	
 	# We perform changes from within transactions - either write all or none
 	with db.transaction:
@@ -126,12 +130,13 @@ def import_data(csv_file, db):
 					node_idx[node_attr_list[index_col_num]][row[index_col_num]] = new_node
 	
 	# Count number of successfully added nodes
-	num_of_nodes_after = len(db.nodes)
-	num_of_nodes_added = num_of_nodes_after - num_of_nodes_before	
+	#num_of_nodes_after = len(db.nodes)
+	num_of_nodes['after'] = len(db.nodes)
+	num_of_nodes['added'] = num_of_nodes['after'] - num_of_nodes['before']	
 	
 	# Show results
 	print "### Num of nodes ###\nBefore: %s\nAdded : %s\nAfter : %s"\
-		% (num_of_nodes_before, num_of_nodes_added, num_of_nodes_after)
+		% (num_of_nodes['before'], num_of_nodes['added'], num_of_nodes['after'])
 
 
 if __name__ == '__main__':	
