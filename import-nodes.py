@@ -7,6 +7,7 @@
 # Updated: 2012-03-25
 
 # OPTIONS (also ok to use command line arguments)
+options = {'input': None, 'output': None}
 input = None  # structured data file to read
 output = None # neo4j database folder
 
@@ -32,10 +33,10 @@ Help/information
 =========================================================================
 	''')
 
+#def options(input, output):
+
 def main(input, output):
-	''' The main method takes care of the option parameters, 
-	for more information on how getopt works 
-	please read http://www.doughellmann.com/PyMOTW/getopt/ '''
+	''' Handles option parameters as well as  '''
 	try:
 		opts, args = getopt.getopt(sys.argv[1:], 'hi:o:v', ['help', 'input=','output='])
 	except getopt.GetoptError, err:
@@ -75,37 +76,45 @@ def create_database(database_name):
 	db_obj = GraphDatabase(database_name)    
 	return db_obj
 	
-def import_data(csv_file, database):
+def import_data(csv_file, db):
 	''' Import data from CSV to neo4j database '''
 	
 	file_list = csv.reader(open(csv_file, 'rb'), delimiter=';', quotechar='|')
-		
-	# Create node index
-	#  See http://docs.neo4j.org/chunked/snapshot/python-embedded-reference-indexes.html
-	#  TODO Check if exists: exists = db.node.indexes.exists('my_nodes')
-	with database.transaction:
-		node_idx = database.node.indexes.create('my_nodes')
-		
-	node_attr_list = [] # create empty attribute list				
-	i = 0
-	for row in file_list: # loop each row in file
-		if i == 0: # header row
-		
-			for col in row:
-				node_attr_list.append(col) # save attribute names from first row
-				
+	
+	# Count number of nodes (TODO: Option to deactive, might be slow with big data)
+	num_of_nodes_before = len(db.nodes)
+	
+	# We perform changes from within transactions - either write all or none
+	with db.transaction:
+	
+		# Create node index
+		if db.node.indexes.exists('my_index'):
+			node_idx = db.node.indexes.get('my_index')
 		else:
-			with database.transaction:
-				new_node = database.node()
-				for col_num in range(len(node_attr_list)):
-					new_node[node_attr_list[col_num]] = row[col_num]
+			node_idx = db.node.indexes.create('my_index')
+
+		# Loop each row to create the nodes
+		for row_id, row in enumerate(file_list): 
+			if row_id == 0: # header row
+				node_attr_list = [] # create empty attribute list
+				for col in row:
+					node_attr_list.append(col) # save attribute names from first row		
+			else:
+					new_node = db.node()
+					for col_num in range(len(node_attr_list)):
+						new_node[node_attr_list[col_num]] = row[col_num]
 					
-				# Add the node to the index
-				index_col_num = 0 # first column will be indexed
-				node_idx[node_attr_list[index_col_num]][row[index_col_num]] = new_node
-		i += 1
-		
-	print(str(i) + ' nodes were successfully added to the database.')
+					# Add the node to the index
+					index_col_num = 0 # first column will be indexed (TODO: Add option)
+					node_idx[node_attr_list[index_col_num]][row[index_col_num]] = new_node
+	
+	# Count number of successfully added nodes
+	num_of_nodes_after = len(db.nodes)
+	num_of_nodes_added = num_of_nodes_after - num_of_nodes_before	
+	
+	# Show results
+	print "### Num of nodes ###\nBefore: %s\nAdded : %s\nAfter : %s"\
+		% (num_of_nodes_before, num_of_nodes_added, num_of_nodes_after)
 
 if __name__ == '__main__':
 	''' Constructor; if = runs as script / else = runs as module '''	

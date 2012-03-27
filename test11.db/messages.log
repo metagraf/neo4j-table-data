@@ -1,0 +1,872 @@
+2012-03-27 23:30:39.483+0200: Creating new db @ /Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/test11.db/neostore
+2012-03-27 23:30:39.942+0200: Opened [/Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/test11.db/nioneo_logical.log.1] clean empty log, version=0, lastTxId=1
+2012-03-27 23:30:40.043+0200: Opened [/Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/test11.db/index/lucene.log.1] clean empty log, version=0, lastTxId=1
+2012-03-27 23:30:40.064+0200: TM new log: tm_tx_log.1
+2012-03-27 23:30:40.119+0200: --- STARTUP diagnostics START ---
+2012-03-27 23:30:40.119+0200: Graph Database: org.neo4j.kernel.EmbeddedGraphDatabase StoreId[time:1332883839532, id:-3426055042340095494, store version: 13561656364791302]
+2012-03-27 23:30:40.121+0200: Kernel version: Neo4j - Graph Database Kernel 1.6
+2012-03-27 23:30:40.121+0200: Neo4j component versions:
+2012-03-27 23:30:40.121+0200:   Neo4j - Graph Database Kernel 1.6
+2012-03-27 23:30:40.123+0200: Diagnostics providers:
+    KernelDiagnostics:Versions
+    org.neo4j.kernel.info.DiagnosticsManager
+    SYSTEM_MEMORY
+    JAVA_MEMORY
+    OPERATING_SYSTEM
+    JAVA_VIRTUAL_MACHINE
+    CLASSPATH
+    LIBRARY_PATH
+    SYSTEM_PROPERTIES
+    org.neo4j.kernel.Config
+    NEO_STORE_VERSIONS
+    NEO_STORE_ID_USAGE
+    KernelDiagnostics:StoreFiles
+2012-03-27 23:30:40.125+0200: System memory information:
+    Total Physical memory: 6,00 GB
+    Free Physical memory: 1,44 GB
+    Committed virtual memory: 864,12 MB
+    Total swap space: 1,00 GB
+    Free swap space: 655,20 MB
+2012-03-27 23:30:40.151+0200: JVM memory information:
+    Free  memory: 50,92 MB
+    Total memory: 62,44 MB
+    Max   memory: 94,44 MB
+    Garbage Collector: ParNew: [Par Eden Space, Par Survivor Space]
+    Garbage Collector: ConcurrentMarkSweep: [Par Eden Space, Par Survivor Space, CMS Old Gen, CMS Perm Gen]
+    Memory Pool: Code Cache (Non-heap memory): committed=676,00 kB, used=672,19 kB, max=32,00 MB, threshold=0,00 B
+    Memory Pool: Par Eden Space (Heap memory): committed=12,88 MB, used=11,52 MB, max=12,88 MB, threshold=?
+    Memory Pool: Par Survivor Space (Heap memory): committed=1,56 MB, used=0,00 B, max=1,56 MB, threshold=?
+    Memory Pool: CMS Old Gen (Heap memory): committed=48,00 MB, used=0,00 B, max=80,00 MB, threshold=0,00 B
+    Memory Pool: CMS Perm Gen (Non-heap memory): committed=12,00 MB, used=5,92 MB, max=64,00 MB, threshold=0,00 B
+2012-03-27 23:30:40.197+0200: Operating system information:
+    Operating System: Mac OS X; version: 10.7.2; arch: i386; cpus: 2
+    Max number of file descriptors: 10240
+    Number of open file descriptors: 65
+    Process id: 59765@Thomas-Reinholdssons-MacBook-Pro.local
+    Byte order: LITTLE_ENDIAN
+2012-03-27 23:30:40.211+0200: JVM information:
+    VM Name: Java HotSpot(TM) Client VM
+    VM Vendor: Apple Inc.
+    VM Version: 20.4-b02-402
+    JIT compiler: HotSpot Client Compiler
+    VM Arguments: []
+2012-03-27 23:30:40.211+0200: Java classpath:
+     [bootstrap] /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/charsets.jar
+     [bootstrap] /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/sunrsasign.jar
+     [bootstrap] /System/Library/Frameworks/JavaVM.framework/Versions/A/Frameworks/JavaRuntimeSupport.framework/Versions/A/Resources/Java/JavaRuntimeSupport.jar
+     [loader.1] file:/System/Library/Java/Extensions/dns_sd.jar
+     [loader.1] file:/System/Library/Java/Extensions/j3dutils.jar
+     [loader.1] file:/System/Library/Java/Extensions/MRJToolkit.jar
+     [loader.1] file:/System/Library/Java/Extensions/jai_core.jar
+     [loader.1] file:/System/Library/Java/Extensions/vecmath.jar
+     [loader.1] file:/System/Library/Java/Extensions/libmlib_jai.jnilib
+     [classpath + loader.0] file:/Users/reinholdsson/.python-eggs/neo4j_embedded-1.6-py2.7.egg-tmp/neo4j/javalib/neo4j-jmx-1.6.jar
+     [loader.1] file:/System/Library/Java/Extensions/jai_codec.jar
+     [classpath + loader.0] file:/Users/reinholdsson/.python-eggs/neo4j_embedded-1.6-py2.7.egg-tmp/neo4j/javalib/neo4j-udc-1.6.jar
+     [classpath + loader.0] file:/Users/reinholdsson/.python-eggs/neo4j_embedded-1.6-py2.7.egg-tmp/neo4j/javalib/geronimo-jta_1.1_spec-1.1.1.jar
+     [classpath + loader.0] file:/Users/reinholdsson/.python-eggs/neo4j_embedded-1.6-py2.7.egg-tmp/neo4j/javalib/neo4j-1.6.jar
+     [loader.1] file:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext/dnsns.jar
+     [loader.1] file:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext/sunjce_provider.jar
+     [bootstrap] /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/laf.jar
+     [loader.1] file:/System/Library/Java/Extensions/libJ3D.jnilib
+     [loader.1] file:/System/Library/Java/Extensions/mlibwrapper_jai.jar
+     [bootstrap] /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar
+     [loader.1] file:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext/localedata.jar
+     [loader.1] file:/System/Library/Java/Extensions/QTJava.zip
+     [classpath + loader.0] file:/Users/reinholdsson/.python-eggs/neo4j_embedded-1.6-py2.7.egg-tmp/neo4j/javalib/neo4j-lucene-index-1.6.jar
+     [bootstrap] /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/jce.jar
+     [bootstrap] /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsse.jar
+     [classpath + loader.0] file:/Users/reinholdsson/.python-eggs/neo4j_embedded-1.6-py2.7.egg-tmp/neo4j/javalib/neo4j-kernel-1.6.jar
+     [loader.1] file:/System/Library/Java/Extensions/libJ3DAudio.jnilib
+     [loader.1] file:/System/Library/Java/Extensions/libAppleScriptEngine.jnilib
+     [bootstrap] /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/ui.jar
+     [classpath + loader.0] file:/Users/reinholdsson/.python-eggs/neo4j_embedded-1.6-py2.7.egg-tmp/neo4j/javalib/neo4j-graph-algo-1.6.jar
+     [loader.1] file:/System/Library/Java/Extensions/AppleScriptEngine.jar
+     [loader.1] file:/System/Library/Java/Extensions/j3daudio.jar
+     [classpath + loader.0] file:/Users/reinholdsson/.python-eggs/neo4j_embedded-1.6-py2.7.egg-tmp/neo4j/javalib/lucene-core-3.5.0.jar
+     [loader.1] file:/System/Library/Java/Extensions/libJ3DUtils.jnilib
+     [loader.1] file:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext/apple_provider.jar
+     [bootstrap] /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsfd.jar
+     [classpath + loader.0] file:/Users/reinholdsson/.python-eggs/neo4j_embedded-1.6-py2.7.egg-tmp/neo4j/javalib/neo4j-cypher-1.6.jar
+     [loader.1] file:/System/Library/Java/Extensions/libQTJNative.jnilib
+     [loader.1] file:/System/Library/Java/Extensions/j3dcore.jar
+     [loader.1] file:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext/sunpkcs11.jar
+     [classpath + loader.0] file:/Users/reinholdsson/.python-eggs/neo4j_embedded-1.6-py2.7.egg-tmp/neo4j/javalib/neo4j-graph-matching-1.6.jar
+     [classpath + loader.0] file:/Users/reinholdsson/.python-eggs/neo4j_embedded-1.6-py2.7.egg-tmp/neo4j/javalib/scala-library-2.9.0-1.jar
+2012-03-27 23:30:40.215+0200: Library path:
+    /Users/reinholdsson/Dropbox/projects/git/neo4j-table-data
+    /Library/Java/Extensions
+    /System/Library/Java/Extensions
+    /usr/lib/java
+2012-03-27 23:30:40.215+0200: System.properties:
+    sun.boot.library.path = /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Libraries
+    awt.nativeDoubleBuffering = true
+    gopherProxySet = false
+    mrj.build = 11M3527
+    path.separator = :
+    file.encoding.pkg = sun.io
+    user.country = SE
+    sun.os.patch.level = unknown
+    user.dir = /Users/reinholdsson/Dropbox/projects/git/neo4j-table-data
+    sun.jnu.encoding = MacRoman
+    sun.management.compiler = HotSpot Client Compiler
+    http.nonProxyHosts = local|*.local|169.254/16|*.169.254/16
+    user.home = /Users/reinholdsson
+    user.timezone = Europe/Stockholm
+    file.encoding = MacRoman
+    user.name = reinholdsson
+    sun.arch.data.model = 32
+    user.language = sv
+    awt.toolkit = apple.awt.CToolkit
+    file.separator = /
+    sun.io.unicode.encoding = UnicodeLittle
+    sun.cpu.endian = little
+    mrj.version = 1070.1.6.0_29-402
+    socksNonProxyHosts = local|*.local|169.254/16|*.169.254/16
+    ftp.nonProxyHosts = local|*.local|169.254/16|*.169.254/16
+    sun.cpu.isalist = 
+2012-03-27 23:30:40.229+0200: Neo4j Kernel properties:
+    store_dir=/Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/test11.db
+    logical_log=/Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/test11.db/nioneo_logical.log
+    node_auto_indexing=false
+    neostore.relationshipstore.db.mapped_memory=100M
+    neostore.nodestore.db.mapped_memory=20M
+    use_memory_mapped_buffers=true
+    rebuild_idgenerators_fast=true
+    neostore.propertystore.db.index.keys.mapped_memory=1M
+    neostore.propertystore.db.arrays.mapped_memory=130M
+    neostore.propertystore.db.strings.mapped_memory=130M
+    neo_store=/Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/test11.db/neostore
+    neostore.propertystore.db.index.mapped_memory=1M
+    create=true
+    neostore.propertystore.db.mapped_memory=90M
+    relationship_auto_indexing=false
+2012-03-27 23:30:40.232+0200: Store versions:
+    NeoStore v0.A.0
+    NodeStore v0.A.0
+    RelationshipStore v0.A.0
+    RelationshipTypeStore v0.A.0
+    PropertyStore v0.A.0
+    PropertyIndexStore v0.A.0
+    StringPropertyStore v0.A.0
+    ArrayPropertyStore v0.A.0
+2012-03-27 23:30:40.247+0200: Id usage:
+    NodeStore: used=1 high=0
+    RelationshipStore: used=0 high=-1
+    RelationshipTypeStore: used=0 high=-1
+    PropertyStore: used=0 high=-1
+    PropertyIndexStore: used=0 high=-1
+    StringPropertyStore: used=1 high=0
+    ArrayPropertyStore: used=1 high=0
+2012-03-27 23:30:40.248+0200: Storage files:
+    active_tx_log: 11,00 B
+    index:
+      lucene-store.db: 40,00 B
+      lucene.log.1: 16,00 B
+      lucene.log.active: 4,00 B
+    - Total: 60,00 B
+    lock: 0,00 B
+    messages.log: 9,55 kB
+    neostore: 54,00 B
+    neostore.id: 9,00 B
+    neostore.nodestore.db: 9,00 B
+    neostore.nodestore.db.id: 9,00 B
+    neostore.propertystore.db: 0,00 B
+    neostore.propertystore.db.arrays: 128,00 B
+    neostore.propertystore.db.arrays.id: 9,00 B
+    neostore.propertystore.db.id: 9,00 B
+    neostore.propertystore.db.index: 0,00 B
+    neostore.propertystore.db.index.id: 9,00 B
+    neostore.propertystore.db.index.keys: 38,00 B
+    neostore.propertystore.db.index.keys.id: 9,00 B
+    neostore.propertystore.db.strings: 128,00 B
+    neostore.propertystore.db.strings.id: 9,00 B
+    neostore.relationshipstore.db: 0,00 B
+    neostore.relationshipstore.db.id: 9,00 B
+    neostore.relationshiptypestore.db: 0,00 B
+    neostore.relationshiptypestore.db.id: 9,00 B
+    neostore.relationshiptypestore.db.names: 38,00 B
+    neostore.relationshiptypestore.db.names.id: 9,00 B
+    nioneo_logical.log.1: 16,00 B
+    nioneo_logical.log.active: 4,00 B
+    tm_tx_log.1: 0,00 B
+2012-03-27 23:30:40.253+0200: --- STARTUP diagnostics END ---
+2012-03-27 23:30:40.259+0200: Extension org.neo4j.kernel.KernelExtension[kernel udc] loaded ok
+2012-03-27 23:30:40.442+0200: Extension org.neo4j.kernel.KernelExtension[kernel jmx] loaded ok
+2012-03-27 23:30:41.091+0200: Closed log /Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/test11.db/nioneo_logical.log
+2012-03-27 23:30:41.166+0200: NeoStore closed
+2012-03-27 23:30:41.234+0200: Closed log /Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/test11.db/index/lucene.log
+2012-03-27 23:30:41.239+0200: NeoStore closed
+2012-03-27 23:30:41.255+0200: TM shutting down
+2012-03-27 23:35:17.609+0200: Opened [/Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/test11.db/nioneo_logical.log.1] clean empty log, version=0, lastTxId=2
+2012-03-27 23:35:17.687+0200: Opened [/Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/test11.db/index/lucene.log.1] clean empty log, version=0, lastTxId=3
+2012-03-27 23:35:17.690+0200: TM opening log: /Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/test11.db/tm_tx_log.1
+2012-03-27 23:35:17.733+0200: --- STARTUP diagnostics START ---
+2012-03-27 23:35:17.733+0200: Graph Database: org.neo4j.kernel.EmbeddedGraphDatabase StoreId[time:1332883839532, id:-3426055042340095494, store version: 13561656364791302]
+2012-03-27 23:35:17.736+0200: Kernel version: Neo4j - Graph Database Kernel 1.6
+2012-03-27 23:35:17.736+0200: Neo4j component versions:
+2012-03-27 23:35:17.736+0200:   Neo4j - Graph Database Kernel 1.6
+2012-03-27 23:35:17.737+0200: Diagnostics providers:
+    KernelDiagnostics:Versions
+    org.neo4j.kernel.info.DiagnosticsManager
+    SYSTEM_MEMORY
+    JAVA_MEMORY
+    OPERATING_SYSTEM
+    JAVA_VIRTUAL_MACHINE
+    CLASSPATH
+    LIBRARY_PATH
+    SYSTEM_PROPERTIES
+    org.neo4j.kernel.Config
+    NEO_STORE_VERSIONS
+    NEO_STORE_ID_USAGE
+    KernelDiagnostics:StoreFiles
+2012-03-27 23:35:17.740+0200: System memory information:
+    Total Physical memory: 6,00 GB
+    Free Physical memory: 1,45 GB
+    Committed virtual memory: 863,51 MB
+    Total swap space: 1,00 GB
+    Free swap space: 655,20 MB
+2012-03-27 23:35:17.787+0200: JVM memory information:
+    Free  memory: 52,24 MB
+    Total memory: 62,44 MB
+    Max   memory: 94,44 MB
+    Garbage Collector: ParNew: [Par Eden Space, Par Survivor Space]
+    Garbage Collector: ConcurrentMarkSweep: [Par Eden Space, Par Survivor Space, CMS Old Gen, CMS Perm Gen]
+    Memory Pool: Code Cache (Non-heap memory): committed=676,00 kB, used=672,19 kB, max=32,00 MB, threshold=0,00 B
+    Memory Pool: Par Eden Space (Heap memory): committed=12,88 MB, used=10,20 MB, max=12,88 MB, threshold=?
+    Memory Pool: Par Survivor Space (Heap memory): committed=1,56 MB, used=0,00 B, max=1,56 MB, threshold=?
+    Memory Pool: CMS Old Gen (Heap memory): committed=48,00 MB, used=0,00 B, max=80,00 MB, threshold=0,00 B
+    Memory Pool: CMS Perm Gen (Non-heap memory): committed=12,00 MB, used=5,94 MB, max=64,00 MB, threshold=0,00 B
+2012-03-27 23:35:17.796+0200: Operating system information:
+    Operating System: Mac OS X; version: 10.7.2; arch: i386; cpus: 2
+    Max number of file descriptors: 10240
+    Number of open file descriptors: 65
+    Process id: 59997@Thomas-Reinholdssons-MacBook-Pro.local
+    Byte order: LITTLE_ENDIAN
+2012-03-27 23:35:17.806+0200: JVM information:
+    VM Name: Java HotSpot(TM) Client VM
+    VM Vendor: Apple Inc.
+    VM Version: 20.4-b02-402
+    JIT compiler: HotSpot Client Compiler
+    VM Arguments: []
+2012-03-27 23:35:17.808+0200: Java classpath:
+     [bootstrap] /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/charsets.jar
+     [bootstrap] /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/sunrsasign.jar
+     [bootstrap] /System/Library/Frameworks/JavaVM.framework/Versions/A/Frameworks/JavaRuntimeSupport.framework/Versions/A/Resources/Java/JavaRuntimeSupport.jar
+     [loader.1] file:/System/Library/Java/Extensions/dns_sd.jar
+     [loader.1] file:/System/Library/Java/Extensions/j3dutils.jar
+     [loader.1] file:/System/Library/Java/Extensions/MRJToolkit.jar
+     [loader.1] file:/System/Library/Java/Extensions/jai_core.jar
+     [loader.1] file:/System/Library/Java/Extensions/vecmath.jar
+     [loader.1] file:/System/Library/Java/Extensions/libmlib_jai.jnilib
+     [classpath + loader.0] file:/Users/reinholdsson/.python-eggs/neo4j_embedded-1.6-py2.7.egg-tmp/neo4j/javalib/neo4j-jmx-1.6.jar
+     [loader.1] file:/System/Library/Java/Extensions/jai_codec.jar
+     [classpath + loader.0] file:/Users/reinholdsson/.python-eggs/neo4j_embedded-1.6-py2.7.egg-tmp/neo4j/javalib/neo4j-udc-1.6.jar
+     [classpath + loader.0] file:/Users/reinholdsson/.python-eggs/neo4j_embedded-1.6-py2.7.egg-tmp/neo4j/javalib/geronimo-jta_1.1_spec-1.1.1.jar
+     [classpath + loader.0] file:/Users/reinholdsson/.python-eggs/neo4j_embedded-1.6-py2.7.egg-tmp/neo4j/javalib/neo4j-1.6.jar
+     [loader.1] file:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext/dnsns.jar
+     [loader.1] file:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext/sunjce_provider.jar
+     [bootstrap] /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/laf.jar
+     [loader.1] file:/System/Library/Java/Extensions/libJ3D.jnilib
+     [loader.1] file:/System/Library/Java/Extensions/mlibwrapper_jai.jar
+     [bootstrap] /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar
+     [loader.1] file:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext/localedata.jar
+     [loader.1] file:/System/Library/Java/Extensions/QTJava.zip
+     [classpath + loader.0] file:/Users/reinholdsson/.python-eggs/neo4j_embedded-1.6-py2.7.egg-tmp/neo4j/javalib/neo4j-lucene-index-1.6.jar
+     [bootstrap] /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/jce.jar
+     [bootstrap] /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsse.jar
+     [classpath + loader.0] file:/Users/reinholdsson/.python-eggs/neo4j_embedded-1.6-py2.7.egg-tmp/neo4j/javalib/neo4j-kernel-1.6.jar
+     [loader.1] file:/System/Library/Java/Extensions/libJ3DAudio.jnilib
+     [loader.1] file:/System/Library/Java/Extensions/libAppleScriptEngine.jnilib
+     [bootstrap] /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/ui.jar
+     [classpath + loader.0] file:/Users/reinholdsson/.python-eggs/neo4j_embedded-1.6-py2.7.egg-tmp/neo4j/javalib/neo4j-graph-algo-1.6.jar
+     [loader.1] file:/System/Library/Java/Extensions/AppleScriptEngine.jar
+     [loader.1] file:/System/Library/Java/Extensions/j3daudio.jar
+     [classpath + loader.0] file:/Users/reinholdsson/.python-eggs/neo4j_embedded-1.6-py2.7.egg-tmp/neo4j/javalib/lucene-core-3.5.0.jar
+     [loader.1] file:/System/Library/Java/Extensions/libJ3DUtils.jnilib
+     [loader.1] file:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext/apple_provider.jar
+     [bootstrap] /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsfd.jar
+     [classpath + loader.0] file:/Users/reinholdsson/.python-eggs/neo4j_embedded-1.6-py2.7.egg-tmp/neo4j/javalib/neo4j-cypher-1.6.jar
+     [loader.1] file:/System/Library/Java/Extensions/libQTJNative.jnilib
+     [loader.1] file:/System/Library/Java/Extensions/j3dcore.jar
+     [loader.1] file:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext/sunpkcs11.jar
+     [classpath + loader.0] file:/Users/reinholdsson/.python-eggs/neo4j_embedded-1.6-py2.7.egg-tmp/neo4j/javalib/neo4j-graph-matching-1.6.jar
+     [classpath + loader.0] file:/Users/reinholdsson/.python-eggs/neo4j_embedded-1.6-py2.7.egg-tmp/neo4j/javalib/scala-library-2.9.0-1.jar
+2012-03-27 23:35:17.809+0200: Library path:
+    /Users/reinholdsson/Dropbox/projects/git/neo4j-table-data
+    /Library/Java/Extensions
+    /System/Library/Java/Extensions
+    /usr/lib/java
+2012-03-27 23:35:17.810+0200: System.properties:
+    sun.boot.library.path = /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Libraries
+    awt.nativeDoubleBuffering = true
+    gopherProxySet = false
+    mrj.build = 11M3527
+    path.separator = :
+    file.encoding.pkg = sun.io
+    user.country = SE
+    sun.os.patch.level = unknown
+    user.dir = /Users/reinholdsson/Dropbox/projects/git/neo4j-table-data
+    sun.jnu.encoding = MacRoman
+    sun.management.compiler = HotSpot Client Compiler
+    http.nonProxyHosts = local|*.local|169.254/16|*.169.254/16
+    user.home = /Users/reinholdsson
+    user.timezone = Europe/Stockholm
+    file.encoding = MacRoman
+    user.name = reinholdsson
+    sun.arch.data.model = 32
+    user.language = sv
+    awt.toolkit = apple.awt.CToolkit
+    file.separator = /
+    sun.io.unicode.encoding = UnicodeLittle
+    sun.cpu.endian = little
+    mrj.version = 1070.1.6.0_29-402
+    socksNonProxyHosts = local|*.local|169.254/16|*.169.254/16
+    ftp.nonProxyHosts = local|*.local|169.254/16|*.169.254/16
+    sun.cpu.isalist = 
+2012-03-27 23:35:17.811+0200: Neo4j Kernel properties:
+    store_dir=/Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/test11.db
+    logical_log=/Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/test11.db/nioneo_logical.log
+    node_auto_indexing=false
+    neostore.relationshipstore.db.mapped_memory=100M
+    neostore.nodestore.db.mapped_memory=20M
+    use_memory_mapped_buffers=true
+    rebuild_idgenerators_fast=true
+    neostore.propertystore.db.index.keys.mapped_memory=1M
+    neostore.propertystore.db.arrays.mapped_memory=130M
+    neostore.propertystore.db.strings.mapped_memory=130M
+    neo_store=/Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/test11.db/neostore
+    neostore.propertystore.db.index.mapped_memory=1M
+    create=true
+    neostore.propertystore.db.mapped_memory=90M
+    relationship_auto_indexing=false
+2012-03-27 23:35:17.813+0200: Store versions:
+    NeoStore v0.A.0
+    NodeStore v0.A.0
+    RelationshipStore v0.A.0
+    RelationshipTypeStore v0.A.0
+    PropertyStore v0.A.0
+    PropertyIndexStore v0.A.0
+    StringPropertyStore v0.A.0
+    ArrayPropertyStore v0.A.0
+2012-03-27 23:35:17.813+0200: Id usage:
+    NodeStore: used=217 high=216
+    RelationshipStore: used=0 high=-1
+    RelationshipTypeStore: used=0 high=-1
+    PropertyStore: used=243 high=242
+    PropertyIndexStore: used=3 high=2
+    StringPropertyStore: used=1 high=0
+    ArrayPropertyStore: used=1 high=0
+2012-03-27 23:35:17.814+0200: Storage files:
+    active_tx_log: 11,00 B
+    index:
+      lucene:
+        node:
+          my_index:
+            _0.fdt: 2,64 kB
+            _0.fdx: 1,69 kB
+            _0.fnm: 17,00 B
+            _0.frq: 736,00 B
+            _0.nrm: 436,00 B
+            _0.prx: 432,00 B
+            _0.tii: 73,00 B
+            _0.tis: 3,13 kB
+            segments.gen: 20,00 B
+            segments_1: 231,00 B
+          - Total: 9,36 kB
+        - Total: 9,36 kB
+      - Total: 9,36 kB
+      lucene-store.db: 40,00 B
+      lucene.log.1: 16,00 B
+      lucene.log.active: 4,00 B
+    - Total: 9,42 kB
+    index.db: 109,00 B
+    lock: 0,00 B
+    messages.log: 20,85 kB
+    neostore: 54,00 B
+    neostore.id: 9,00 B
+    neostore.nodestore.db: 1,91 kB
+    neostore.nodestore.db.id: 9,00 B
+    neostore.propertystore.db: 9,73 kB
+    neostore.propertystore.db.arrays: 128,00 B
+    neostore.propertystore.db.arrays.id: 9,00 B
+    neostore.propertystore.db.id: 9,00 B
+    neostore.propertystore.db.index: 1,02 kB
+    neostore.propertystore.db.index.id: 9,00 B
+    neostore.propertystore.db.index.keys: 1,00 kB
+    neostore.propertystore.db.index.keys.id: 9,00 B
+    neostore.propertystore.db.strings: 128,00 B
+    neostore.propertystore.db.strings.id: 9,00 B
+    neostore.relationshipstore.db: 0,00 B
+    neostore.relationshipstore.db.id: 9,00 B
+    neostore.relationshiptypestore.db: 0,00 B
+    neostore.relationshiptypestore.db.id: 9,00 B
+    neostore.relationshiptypestore.db.names: 38,00 B
+    neostore.relationshiptypestore.db.names.id: 9,00 B
+    nioneo_logical.log.1: 16,00 B
+    nioneo_logical.log.active: 4,00 B
+    tm_tx_log.1: 0,00 B
+2012-03-27 23:35:17.832+0200: --- STARTUP diagnostics END ---
+2012-03-27 23:35:17.834+0200: Extension org.neo4j.kernel.KernelExtension[kernel udc] loaded ok
+2012-03-27 23:35:18.072+0200: Extension org.neo4j.kernel.KernelExtension[kernel jmx] loaded ok
+2012-03-27 23:35:18.719+0200: Closed log /Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/test11.db/nioneo_logical.log
+2012-03-27 23:35:18.767+0200: NeoStore closed
+2012-03-27 23:35:18.834+0200: Closed log /Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/test11.db/index/lucene.log
+2012-03-27 23:35:18.834+0200: NeoStore closed
+2012-03-27 23:35:18.835+0200: TM shutting down
+2012-03-27 23:39:29.783+0200: Opened [/Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/test11.db/nioneo_logical.log.1] clean empty log, version=0, lastTxId=3
+2012-03-27 23:39:29.837+0200: Opened [/Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/test11.db/index/lucene.log.1] clean empty log, version=0, lastTxId=4
+2012-03-27 23:39:29.843+0200: TM opening log: /Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/test11.db/tm_tx_log.1
+2012-03-27 23:39:29.915+0200: --- STARTUP diagnostics START ---
+2012-03-27 23:39:29.915+0200: Graph Database: org.neo4j.kernel.EmbeddedGraphDatabase StoreId[time:1332883839532, id:-3426055042340095494, store version: 13561656364791302]
+2012-03-27 23:39:29.917+0200: Kernel version: Neo4j - Graph Database Kernel 1.6
+2012-03-27 23:39:29.918+0200: Neo4j component versions:
+2012-03-27 23:39:29.918+0200:   Neo4j - Graph Database Kernel 1.6
+2012-03-27 23:39:30.001+0200: Diagnostics providers:
+    KernelDiagnostics:Versions
+    org.neo4j.kernel.info.DiagnosticsManager
+    SYSTEM_MEMORY
+    JAVA_MEMORY
+    OPERATING_SYSTEM
+    JAVA_VIRTUAL_MACHINE
+    CLASSPATH
+    LIBRARY_PATH
+    SYSTEM_PROPERTIES
+    org.neo4j.kernel.Config
+    NEO_STORE_VERSIONS
+    NEO_STORE_ID_USAGE
+    KernelDiagnostics:StoreFiles
+2012-03-27 23:39:30.006+0200: System memory information:
+    Total Physical memory: 6,00 GB
+    Free Physical memory: 1,45 GB
+    Committed virtual memory: 864,00 MB
+    Total swap space: 1,00 GB
+    Free swap space: 655,20 MB
+2012-03-27 23:39:30.021+0200: JVM memory information:
+    Free  memory: 52,23 MB
+    Total memory: 62,44 MB
+    Max   memory: 94,44 MB
+    Garbage Collector: ParNew: [Par Eden Space, Par Survivor Space]
+    Garbage Collector: ConcurrentMarkSweep: [Par Eden Space, Par Survivor Space, CMS Old Gen, CMS Perm Gen]
+    Memory Pool: Code Cache (Non-heap memory): committed=676,00 kB, used=672,19 kB, max=32,00 MB, threshold=0,00 B
+    Memory Pool: Par Eden Space (Heap memory): committed=12,88 MB, used=10,21 MB, max=12,88 MB, threshold=?
+    Memory Pool: Par Survivor Space (Heap memory): committed=1,56 MB, used=0,00 B, max=1,56 MB, threshold=?
+    Memory Pool: CMS Old Gen (Heap memory): committed=48,00 MB, used=0,00 B, max=80,00 MB, threshold=0,00 B
+    Memory Pool: CMS Perm Gen (Non-heap memory): committed=12,00 MB, used=5,94 MB, max=64,00 MB, threshold=0,00 B
+2012-03-27 23:39:30.030+0200: Operating system information:
+    Operating System: Mac OS X; version: 10.7.2; arch: i386; cpus: 2
+    Max number of file descriptors: 10240
+    Number of open file descriptors: 65
+    Process id: 60210@Thomas-Reinholdssons-MacBook-Pro.local
+    Byte order: LITTLE_ENDIAN
+2012-03-27 23:39:30.041+0200: JVM information:
+    VM Name: Java HotSpot(TM) Client VM
+    VM Vendor: Apple Inc.
+    VM Version: 20.4-b02-402
+    JIT compiler: HotSpot Client Compiler
+    VM Arguments: []
+2012-03-27 23:39:30.043+0200: Java classpath:
+     [bootstrap] /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/charsets.jar
+     [bootstrap] /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/sunrsasign.jar
+     [bootstrap] /System/Library/Frameworks/JavaVM.framework/Versions/A/Frameworks/JavaRuntimeSupport.framework/Versions/A/Resources/Java/JavaRuntimeSupport.jar
+     [loader.1] file:/System/Library/Java/Extensions/dns_sd.jar
+     [loader.1] file:/System/Library/Java/Extensions/j3dutils.jar
+     [loader.1] file:/System/Library/Java/Extensions/MRJToolkit.jar
+     [loader.1] file:/System/Library/Java/Extensions/jai_core.jar
+     [loader.1] file:/System/Library/Java/Extensions/vecmath.jar
+     [loader.1] file:/System/Library/Java/Extensions/libmlib_jai.jnilib
+     [classpath + loader.0] file:/Users/reinholdsson/.python-eggs/neo4j_embedded-1.6-py2.7.egg-tmp/neo4j/javalib/neo4j-jmx-1.6.jar
+     [loader.1] file:/System/Library/Java/Extensions/jai_codec.jar
+     [classpath + loader.0] file:/Users/reinholdsson/.python-eggs/neo4j_embedded-1.6-py2.7.egg-tmp/neo4j/javalib/neo4j-udc-1.6.jar
+     [classpath + loader.0] file:/Users/reinholdsson/.python-eggs/neo4j_embedded-1.6-py2.7.egg-tmp/neo4j/javalib/geronimo-jta_1.1_spec-1.1.1.jar
+     [classpath + loader.0] file:/Users/reinholdsson/.python-eggs/neo4j_embedded-1.6-py2.7.egg-tmp/neo4j/javalib/neo4j-1.6.jar
+     [loader.1] file:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext/dnsns.jar
+     [loader.1] file:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext/sunjce_provider.jar
+     [bootstrap] /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/laf.jar
+     [loader.1] file:/System/Library/Java/Extensions/libJ3D.jnilib
+     [loader.1] file:/System/Library/Java/Extensions/mlibwrapper_jai.jar
+     [bootstrap] /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar
+     [loader.1] file:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext/localedata.jar
+     [loader.1] file:/System/Library/Java/Extensions/QTJava.zip
+     [classpath + loader.0] file:/Users/reinholdsson/.python-eggs/neo4j_embedded-1.6-py2.7.egg-tmp/neo4j/javalib/neo4j-lucene-index-1.6.jar
+     [bootstrap] /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/jce.jar
+     [bootstrap] /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsse.jar
+     [classpath + loader.0] file:/Users/reinholdsson/.python-eggs/neo4j_embedded-1.6-py2.7.egg-tmp/neo4j/javalib/neo4j-kernel-1.6.jar
+     [loader.1] file:/System/Library/Java/Extensions/libJ3DAudio.jnilib
+     [loader.1] file:/System/Library/Java/Extensions/libAppleScriptEngine.jnilib
+     [bootstrap] /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/ui.jar
+     [classpath + loader.0] file:/Users/reinholdsson/.python-eggs/neo4j_embedded-1.6-py2.7.egg-tmp/neo4j/javalib/neo4j-graph-algo-1.6.jar
+     [loader.1] file:/System/Library/Java/Extensions/AppleScriptEngine.jar
+     [loader.1] file:/System/Library/Java/Extensions/j3daudio.jar
+     [classpath + loader.0] file:/Users/reinholdsson/.python-eggs/neo4j_embedded-1.6-py2.7.egg-tmp/neo4j/javalib/lucene-core-3.5.0.jar
+     [loader.1] file:/System/Library/Java/Extensions/libJ3DUtils.jnilib
+     [loader.1] file:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext/apple_provider.jar
+     [bootstrap] /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsfd.jar
+     [classpath + loader.0] file:/Users/reinholdsson/.python-eggs/neo4j_embedded-1.6-py2.7.egg-tmp/neo4j/javalib/neo4j-cypher-1.6.jar
+     [loader.1] file:/System/Library/Java/Extensions/libQTJNative.jnilib
+     [loader.1] file:/System/Library/Java/Extensions/j3dcore.jar
+     [loader.1] file:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext/sunpkcs11.jar
+     [classpath + loader.0] file:/Users/reinholdsson/.python-eggs/neo4j_embedded-1.6-py2.7.egg-tmp/neo4j/javalib/neo4j-graph-matching-1.6.jar
+     [classpath + loader.0] file:/Users/reinholdsson/.python-eggs/neo4j_embedded-1.6-py2.7.egg-tmp/neo4j/javalib/scala-library-2.9.0-1.jar
+2012-03-27 23:39:30.044+0200: Library path:
+    /Users/reinholdsson/Dropbox/projects/git/neo4j-table-data
+    /Library/Java/Extensions
+    /System/Library/Java/Extensions
+    /usr/lib/java
+2012-03-27 23:39:30.045+0200: System.properties:
+    sun.boot.library.path = /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Libraries
+    awt.nativeDoubleBuffering = true
+    gopherProxySet = false
+    mrj.build = 11M3527
+    path.separator = :
+    file.encoding.pkg = sun.io
+    user.country = SE
+    sun.os.patch.level = unknown
+    user.dir = /Users/reinholdsson/Dropbox/projects/git/neo4j-table-data
+    sun.jnu.encoding = MacRoman
+    sun.management.compiler = HotSpot Client Compiler
+    http.nonProxyHosts = local|*.local|169.254/16|*.169.254/16
+    user.home = /Users/reinholdsson
+    user.timezone = Europe/Stockholm
+    file.encoding = MacRoman
+    user.name = reinholdsson
+    sun.arch.data.model = 32
+    user.language = sv
+    awt.toolkit = apple.awt.CToolkit
+    file.separator = /
+    sun.io.unicode.encoding = UnicodeLittle
+    sun.cpu.endian = little
+    mrj.version = 1070.1.6.0_29-402
+    socksNonProxyHosts = local|*.local|169.254/16|*.169.254/16
+    ftp.nonProxyHosts = local|*.local|169.254/16|*.169.254/16
+    sun.cpu.isalist = 
+2012-03-27 23:39:30.046+0200: Neo4j Kernel properties:
+    store_dir=/Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/test11.db
+    logical_log=/Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/test11.db/nioneo_logical.log
+    node_auto_indexing=false
+    neostore.relationshipstore.db.mapped_memory=100M
+    neostore.nodestore.db.mapped_memory=20M
+    use_memory_mapped_buffers=true
+    rebuild_idgenerators_fast=true
+    neostore.propertystore.db.index.keys.mapped_memory=1M
+    neostore.propertystore.db.arrays.mapped_memory=130M
+    neostore.propertystore.db.strings.mapped_memory=130M
+    neo_store=/Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/test11.db/neostore
+    neostore.propertystore.db.index.mapped_memory=1M
+    create=true
+    neostore.propertystore.db.mapped_memory=90M
+    relationship_auto_indexing=false
+2012-03-27 23:39:30.047+0200: Store versions:
+    NeoStore v0.A.0
+    NodeStore v0.A.0
+    RelationshipStore v0.A.0
+    RelationshipTypeStore v0.A.0
+    PropertyStore v0.A.0
+    PropertyIndexStore v0.A.0
+    StringPropertyStore v0.A.0
+    ArrayPropertyStore v0.A.0
+2012-03-27 23:39:30.047+0200: Id usage:
+    NodeStore: used=433 high=432
+    RelationshipStore: used=0 high=-1
+    RelationshipTypeStore: used=0 high=-1
+    PropertyStore: used=486 high=485
+    PropertyIndexStore: used=3 high=2
+    StringPropertyStore: used=1 high=0
+    ArrayPropertyStore: used=1 high=0
+2012-03-27 23:39:30.048+0200: Storage files:
+    active_tx_log: 11,00 B
+    index:
+      lucene:
+        node:
+          my_index:
+            _0.fdt: 2,64 kB
+            _0.fdx: 1,69 kB
+            _0.fnm: 17,00 B
+            _0.frq: 736,00 B
+            _0.nrm: 436,00 B
+            _0.prx: 432,00 B
+            _0.tii: 73,00 B
+            _0.tis: 3,13 kB
+            _1.fdt: 2,75 kB
+            _1.fdx: 1,69 kB
+            _1.fnm: 17,00 B
+            _1.frq: 736,00 B
+            _1.nrm: 436,00 B
+            _1.prx: 432,00 B
+            _1.tii: 73,00 B
+            _1.tis: 3,16 kB
+            segments.gen: 20,00 B
+            segments_2: 430,00 B
+          - Total: 18,80 kB
+        - Total: 18,80 kB
+      - Total: 18,80 kB
+      lucene-store.db: 40,00 B
+      lucene.log.1: 16,00 B
+      lucene.log.active: 4,00 B
+    - Total: 18,86 kB
+    index.db: 109,00 B
+    lock: 0,00 B
+    messages.log: 32,59 kB
+    neostore: 54,00 B
+    neostore.id: 9,00 B
+    neostore.nodestore.db: 3,81 kB
+    neostore.nodestore.db.id: 9,00 B
+    neostore.propertystore.db: 19,46 kB
+    neostore.propertystore.db.arrays: 128,00 B
+    neostore.propertystore.db.arrays.id: 9,00 B
+    neostore.propertystore.db.id: 9,00 B
+    neostore.propertystore.db.index: 1,02 kB
+    neostore.propertystore.db.index.id: 9,00 B
+    neostore.propertystore.db.index.keys: 1,00 kB
+    neostore.propertystore.db.index.keys.id: 9,00 B
+    neostore.propertystore.db.strings: 128,00 B
+    neostore.propertystore.db.strings.id: 9,00 B
+    neostore.relationshipstore.db: 0,00 B
+    neostore.relationshipstore.db.id: 9,00 B
+    neostore.relationshiptypestore.db: 0,00 B
+    neostore.relationshiptypestore.db.id: 9,00 B
+    neostore.relationshiptypestore.db.names: 38,00 B
+    neostore.relationshiptypestore.db.names.id: 9,00 B
+    nioneo_logical.log.1: 16,00 B
+    nioneo_logical.log.active: 4,00 B
+    tm_tx_log.1: 0,00 B
+2012-03-27 23:39:30.061+0200: --- STARTUP diagnostics END ---
+2012-03-27 23:39:30.063+0200: Extension org.neo4j.kernel.KernelExtension[kernel udc] loaded ok
+2012-03-27 23:39:30.240+0200: Extension org.neo4j.kernel.KernelExtension[kernel jmx] loaded ok
+2012-03-27 23:39:31.097+0200: Closed log /Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/test11.db/nioneo_logical.log
+2012-03-27 23:39:31.139+0200: NeoStore closed
+2012-03-27 23:39:31.221+0200: Closed log /Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/test11.db/index/lucene.log
+2012-03-27 23:39:31.222+0200: NeoStore closed
+2012-03-27 23:39:31.222+0200: TM shutting down
+2012-03-27 23:39:45.943+0200: Opened [/Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/test11.db/nioneo_logical.log.1] clean empty log, version=0, lastTxId=4
+2012-03-27 23:39:46.011+0200: Opened [/Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/test11.db/index/lucene.log.1] clean empty log, version=0, lastTxId=5
+2012-03-27 23:39:46.014+0200: TM opening log: /Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/test11.db/tm_tx_log.1
+2012-03-27 23:39:46.071+0200: --- STARTUP diagnostics START ---
+2012-03-27 23:39:46.071+0200: Graph Database: org.neo4j.kernel.EmbeddedGraphDatabase StoreId[time:1332883839532, id:-3426055042340095494, store version: 13561656364791302]
+2012-03-27 23:39:46.084+0200: Kernel version: Neo4j - Graph Database Kernel 1.6
+2012-03-27 23:39:46.084+0200: Neo4j component versions:
+2012-03-27 23:39:46.085+0200:   Neo4j - Graph Database Kernel 1.6
+2012-03-27 23:39:46.086+0200: Diagnostics providers:
+    KernelDiagnostics:Versions
+    org.neo4j.kernel.info.DiagnosticsManager
+    SYSTEM_MEMORY
+    JAVA_MEMORY
+    OPERATING_SYSTEM
+    JAVA_VIRTUAL_MACHINE
+    CLASSPATH
+    LIBRARY_PATH
+    SYSTEM_PROPERTIES
+    org.neo4j.kernel.Config
+    NEO_STORE_VERSIONS
+    NEO_STORE_ID_USAGE
+    KernelDiagnostics:StoreFiles
+2012-03-27 23:39:46.088+0200: System memory information:
+    Total Physical memory: 6,00 GB
+    Free Physical memory: 1,45 GB
+    Committed virtual memory: 864,37 MB
+    Total swap space: 1,00 GB
+    Free swap space: 655,20 MB
+2012-03-27 23:39:46.100+0200: JVM memory information:
+    Free  memory: 52,21 MB
+    Total memory: 62,44 MB
+    Max   memory: 94,44 MB
+    Garbage Collector: ParNew: [Par Eden Space, Par Survivor Space]
+    Garbage Collector: ConcurrentMarkSweep: [Par Eden Space, Par Survivor Space, CMS Old Gen, CMS Perm Gen]
+    Memory Pool: Code Cache (Non-heap memory): committed=676,00 kB, used=671,81 kB, max=32,00 MB, threshold=0,00 B
+    Memory Pool: Par Eden Space (Heap memory): committed=12,88 MB, used=10,22 MB, max=12,88 MB, threshold=?
+    Memory Pool: Par Survivor Space (Heap memory): committed=1,56 MB, used=0,00 B, max=1,56 MB, threshold=?
+    Memory Pool: CMS Old Gen (Heap memory): committed=48,00 MB, used=0,00 B, max=80,00 MB, threshold=0,00 B
+    Memory Pool: CMS Perm Gen (Non-heap memory): committed=12,00 MB, used=5,94 MB, max=64,00 MB, threshold=0,00 B
+2012-03-27 23:39:46.113+0200: Operating system information:
+    Operating System: Mac OS X; version: 10.7.2; arch: i386; cpus: 2
+    Max number of file descriptors: 10240
+    Number of open file descriptors: 65
+    Process id: 60252@Thomas-Reinholdssons-MacBook-Pro.local
+    Byte order: LITTLE_ENDIAN
+2012-03-27 23:39:46.129+0200: JVM information:
+    VM Name: Java HotSpot(TM) Client VM
+    VM Vendor: Apple Inc.
+    VM Version: 20.4-b02-402
+    JIT compiler: HotSpot Client Compiler
+    VM Arguments: []
+2012-03-27 23:39:46.271+0200: Java classpath:
+     [bootstrap] /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/charsets.jar
+     [bootstrap] /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/sunrsasign.jar
+     [bootstrap] /System/Library/Frameworks/JavaVM.framework/Versions/A/Frameworks/JavaRuntimeSupport.framework/Versions/A/Resources/Java/JavaRuntimeSupport.jar
+     [loader.1] file:/System/Library/Java/Extensions/dns_sd.jar
+     [loader.1] file:/System/Library/Java/Extensions/j3dutils.jar
+     [loader.1] file:/System/Library/Java/Extensions/MRJToolkit.jar
+     [loader.1] file:/System/Library/Java/Extensions/jai_core.jar
+     [loader.1] file:/System/Library/Java/Extensions/vecmath.jar
+     [loader.1] file:/System/Library/Java/Extensions/libmlib_jai.jnilib
+     [classpath + loader.0] file:/Users/reinholdsson/.python-eggs/neo4j_embedded-1.6-py2.7.egg-tmp/neo4j/javalib/neo4j-jmx-1.6.jar
+     [loader.1] file:/System/Library/Java/Extensions/jai_codec.jar
+     [classpath + loader.0] file:/Users/reinholdsson/.python-eggs/neo4j_embedded-1.6-py2.7.egg-tmp/neo4j/javalib/neo4j-udc-1.6.jar
+     [classpath + loader.0] file:/Users/reinholdsson/.python-eggs/neo4j_embedded-1.6-py2.7.egg-tmp/neo4j/javalib/geronimo-jta_1.1_spec-1.1.1.jar
+     [classpath + loader.0] file:/Users/reinholdsson/.python-eggs/neo4j_embedded-1.6-py2.7.egg-tmp/neo4j/javalib/neo4j-1.6.jar
+     [loader.1] file:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext/dnsns.jar
+     [loader.1] file:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext/sunjce_provider.jar
+     [bootstrap] /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/laf.jar
+     [loader.1] file:/System/Library/Java/Extensions/libJ3D.jnilib
+     [loader.1] file:/System/Library/Java/Extensions/mlibwrapper_jai.jar
+     [bootstrap] /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar
+     [loader.1] file:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext/localedata.jar
+     [loader.1] file:/System/Library/Java/Extensions/QTJava.zip
+     [classpath + loader.0] file:/Users/reinholdsson/.python-eggs/neo4j_embedded-1.6-py2.7.egg-tmp/neo4j/javalib/neo4j-lucene-index-1.6.jar
+     [bootstrap] /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/jce.jar
+     [bootstrap] /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsse.jar
+     [classpath + loader.0] file:/Users/reinholdsson/.python-eggs/neo4j_embedded-1.6-py2.7.egg-tmp/neo4j/javalib/neo4j-kernel-1.6.jar
+     [loader.1] file:/System/Library/Java/Extensions/libJ3DAudio.jnilib
+     [loader.1] file:/System/Library/Java/Extensions/libAppleScriptEngine.jnilib
+     [bootstrap] /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/ui.jar
+     [classpath + loader.0] file:/Users/reinholdsson/.python-eggs/neo4j_embedded-1.6-py2.7.egg-tmp/neo4j/javalib/neo4j-graph-algo-1.6.jar
+     [loader.1] file:/System/Library/Java/Extensions/AppleScriptEngine.jar
+     [loader.1] file:/System/Library/Java/Extensions/j3daudio.jar
+     [classpath + loader.0] file:/Users/reinholdsson/.python-eggs/neo4j_embedded-1.6-py2.7.egg-tmp/neo4j/javalib/lucene-core-3.5.0.jar
+     [loader.1] file:/System/Library/Java/Extensions/libJ3DUtils.jnilib
+     [loader.1] file:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext/apple_provider.jar
+     [bootstrap] /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsfd.jar
+     [classpath + loader.0] file:/Users/reinholdsson/.python-eggs/neo4j_embedded-1.6-py2.7.egg-tmp/neo4j/javalib/neo4j-cypher-1.6.jar
+     [loader.1] file:/System/Library/Java/Extensions/libQTJNative.jnilib
+     [loader.1] file:/System/Library/Java/Extensions/j3dcore.jar
+     [loader.1] file:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext/sunpkcs11.jar
+     [classpath + loader.0] file:/Users/reinholdsson/.python-eggs/neo4j_embedded-1.6-py2.7.egg-tmp/neo4j/javalib/neo4j-graph-matching-1.6.jar
+     [classpath + loader.0] file:/Users/reinholdsson/.python-eggs/neo4j_embedded-1.6-py2.7.egg-tmp/neo4j/javalib/scala-library-2.9.0-1.jar
+2012-03-27 23:39:46.273+0200: Library path:
+    /Users/reinholdsson/Dropbox/projects/git/neo4j-table-data
+    /Library/Java/Extensions
+    /System/Library/Java/Extensions
+    /usr/lib/java
+2012-03-27 23:39:46.273+0200: System.properties:
+    sun.boot.library.path = /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Libraries
+    awt.nativeDoubleBuffering = true
+    gopherProxySet = false
+    mrj.build = 11M3527
+    path.separator = :
+    file.encoding.pkg = sun.io
+    user.country = SE
+    sun.os.patch.level = unknown
+    user.dir = /Users/reinholdsson/Dropbox/projects/git/neo4j-table-data
+    sun.jnu.encoding = MacRoman
+    sun.management.compiler = HotSpot Client Compiler
+    http.nonProxyHosts = local|*.local|169.254/16|*.169.254/16
+    user.home = /Users/reinholdsson
+    user.timezone = Europe/Stockholm
+    file.encoding = MacRoman
+    user.name = reinholdsson
+    sun.arch.data.model = 32
+    user.language = sv
+    awt.toolkit = apple.awt.CToolkit
+    file.separator = /
+    sun.io.unicode.encoding = UnicodeLittle
+    sun.cpu.endian = little
+    mrj.version = 1070.1.6.0_29-402
+    socksNonProxyHosts = local|*.local|169.254/16|*.169.254/16
+    ftp.nonProxyHosts = local|*.local|169.254/16|*.169.254/16
+    sun.cpu.isalist = 
+2012-03-27 23:39:46.275+0200: Neo4j Kernel properties:
+    store_dir=/Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/test11.db
+    logical_log=/Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/test11.db/nioneo_logical.log
+    node_auto_indexing=false
+    neostore.relationshipstore.db.mapped_memory=100M
+    neostore.nodestore.db.mapped_memory=20M
+    use_memory_mapped_buffers=true
+    rebuild_idgenerators_fast=true
+    neostore.propertystore.db.index.keys.mapped_memory=1M
+    neostore.propertystore.db.arrays.mapped_memory=130M
+    neostore.propertystore.db.strings.mapped_memory=130M
+    neo_store=/Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/test11.db/neostore
+    neostore.propertystore.db.index.mapped_memory=1M
+    create=true
+    neostore.propertystore.db.mapped_memory=90M
+    relationship_auto_indexing=false
+2012-03-27 23:39:46.275+0200: Store versions:
+    NeoStore v0.A.0
+    NodeStore v0.A.0
+    RelationshipStore v0.A.0
+    RelationshipTypeStore v0.A.0
+    PropertyStore v0.A.0
+    PropertyIndexStore v0.A.0
+    StringPropertyStore v0.A.0
+    ArrayPropertyStore v0.A.0
+2012-03-27 23:39:46.276+0200: Id usage:
+    NodeStore: used=649 high=648
+    RelationshipStore: used=0 high=-1
+    RelationshipTypeStore: used=0 high=-1
+    PropertyStore: used=729 high=728
+    PropertyIndexStore: used=3 high=2
+    StringPropertyStore: used=1 high=0
+    ArrayPropertyStore: used=1 high=0
+2012-03-27 23:39:46.276+0200: Storage files:
+    active_tx_log: 11,00 B
+    index:
+      lucene:
+        node:
+          my_index:
+            _0.fdt: 2,64 kB
+            _0.fdx: 1,69 kB
+            _0.fnm: 17,00 B
+            _0.frq: 736,00 B
+            _0.nrm: 436,00 B
+            _0.prx: 432,00 B
+            _0.tii: 73,00 B
+            _0.tis: 3,13 kB
+            _1.fdt: 2,75 kB
+            _1.fdx: 1,69 kB
+            _1.fnm: 17,00 B
+            _1.frq: 736,00 B
+            _1.nrm: 436,00 B
+            _1.prx: 432,00 B
+            _1.tii: 73,00 B
+            _1.tis: 3,16 kB
+            _2.fdt: 2,75 kB
+            _2.fdx: 1,69 kB
+            _2.fnm: 17,00 B
+            _2.frq: 736,00 B
+            _2.nrm: 436,00 B
+            _2.prx: 432,00 B
+            _2.tii: 73,00 B
+            _2.tis: 3,15 kB
+            segments.gen: 20,00 B
+            segments_3: 629,00 B
+          - Total: 28,24 kB
+        - Total: 28,24 kB
+      - Total: 28,24 kB
+      lucene-store.db: 40,00 B
+      lucene.log.1: 16,00 B
+      lucene.log.active: 4,00 B
+    - Total: 28,30 kB
+    index.db: 109,00 B
+    lock: 0,00 B
+    messages.log: 44,56 kB
+    neostore: 54,00 B
+    neostore.id: 9,00 B
+    neostore.nodestore.db: 5,70 kB
+    neostore.nodestore.db.id: 9,00 B
+    neostore.propertystore.db: 29,19 kB
+    neostore.propertystore.db.arrays: 128,00 B
+    neostore.propertystore.db.arrays.id: 9,00 B
+    neostore.propertystore.db.id: 9,00 B
+    neostore.propertystore.db.index: 1,02 kB
+    neostore.propertystore.db.index.id: 9,00 B
+    neostore.propertystore.db.index.keys: 1,00 kB
+    neostore.propertystore.db.index.keys.id: 9,00 B
+    neostore.propertystore.db.strings: 128,00 B
+    neostore.propertystore.db.strings.id: 9,00 B
+    neostore.relationshipstore.db: 0,00 B
+    neostore.relationshipstore.db.id: 9,00 B
+    neostore.relationshiptypestore.db: 0,00 B
+    neostore.relationshiptypestore.db.id: 9,00 B
+    neostore.relationshiptypestore.db.names: 38,00 B
+    neostore.relationshiptypestore.db.names.id: 9,00 B
+    nioneo_logical.log.1: 16,00 B
+    nioneo_logical.log.active: 4,00 B
+    tm_tx_log.1: 0,00 B
+2012-03-27 23:39:46.384+0200: --- STARTUP diagnostics END ---
+2012-03-27 23:39:46.406+0200: Extension org.neo4j.kernel.KernelExtension[kernel udc] loaded ok
+2012-03-27 23:39:46.640+0200: Extension org.neo4j.kernel.KernelExtension[kernel jmx] loaded ok
+2012-03-27 23:39:47.588+0200: Closed log /Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/test11.db/nioneo_logical.log
+2012-03-27 23:39:47.600+0200: NeoStore closed
+2012-03-27 23:39:47.800+0200: Closed log /Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/test11.db/index/lucene.log
+2012-03-27 23:39:47.800+0200: NeoStore closed
+2012-03-27 23:39:47.800+0200: TM shutting down
