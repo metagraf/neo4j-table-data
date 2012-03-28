@@ -41,7 +41,7 @@ def main(options):
 		db = create_database(options['output'])
 		
 		# Import data to neo4j database
-		import_data(options['input'], db)
+		import_nodes(options['input'], db)
 			
 		# Shutdown database
 		db.shutdown()
@@ -96,8 +96,8 @@ def create_database(database_name):
 	
 	return db_obj
 	
-def import_data(csv_file, db):
-	''' Import data from CSV to neo4j database '''
+def import_nodes(csv_file, db):
+	''' Import nodes from CSV to neo4j database '''
 	
 	file_list = csv.reader(open(csv_file, 'rb'), delimiter=';', quotechar='|')
 	
