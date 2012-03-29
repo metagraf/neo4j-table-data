@@ -1,13 +1,13 @@
-2012-03-29 22:59:58.288+0200: Creating new db @ /Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/example/graph.db/neostore
-2012-03-29 22:59:58.914+0200: Opened [/Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/example/graph.db/nioneo_logical.log.1] clean empty log, version=0, lastTxId=1
-2012-03-29 22:59:58.970+0200: Opened [/Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/example/graph.db/index/lucene.log.1] clean empty log, version=0, lastTxId=1
-2012-03-29 22:59:58.974+0200: TM new log: tm_tx_log.1
-2012-03-29 22:59:59.041+0200: --- STARTUP diagnostics START ---
-2012-03-29 22:59:59.042+0200: Graph Database: org.neo4j.kernel.EmbeddedGraphDatabase StoreId[time:1333054798401, id:8302341470449700040, store version: 13561656364791302]
-2012-03-29 22:59:59.043+0200: Kernel version: Neo4j - Graph Database Kernel 1.6
-2012-03-29 22:59:59.043+0200: Neo4j component versions:
-2012-03-29 22:59:59.044+0200:   Neo4j - Graph Database Kernel 1.6
-2012-03-29 22:59:59.045+0200: Diagnostics providers:
+2012-03-29 23:11:30.190+0200: Creating new db @ /Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/example/graph.db/neostore
+2012-03-29 23:11:30.610+0200: Opened [/Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/example/graph.db/nioneo_logical.log.1] clean empty log, version=0, lastTxId=1
+2012-03-29 23:11:30.750+0200: Opened [/Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/example/graph.db/index/lucene.log.1] clean empty log, version=0, lastTxId=1
+2012-03-29 23:11:30.764+0200: TM new log: tm_tx_log.1
+2012-03-29 23:11:30.807+0200: --- STARTUP diagnostics START ---
+2012-03-29 23:11:30.807+0200: Graph Database: org.neo4j.kernel.EmbeddedGraphDatabase StoreId[time:1333055490216, id:439735860994774575, store version: 13561656364791302]
+2012-03-29 23:11:30.808+0200: Kernel version: Neo4j - Graph Database Kernel 1.6
+2012-03-29 23:11:30.809+0200: Neo4j component versions:
+2012-03-29 23:11:30.819+0200:   Neo4j - Graph Database Kernel 1.6
+2012-03-29 23:11:30.830+0200: Diagnostics providers:
     KernelDiagnostics:Versions
     org.neo4j.kernel.info.DiagnosticsManager
     SYSTEM_MEMORY
@@ -21,13 +21,13 @@
     NEO_STORE_VERSIONS
     NEO_STORE_ID_USAGE
     KernelDiagnostics:StoreFiles
-2012-03-29 22:59:59.066+0200: System memory information:
+2012-03-29 23:11:30.835+0200: System memory information:
     Total Physical memory: 6,00 GB
-    Free Physical memory: 769,80 MB
-    Committed virtual memory: 863,75 MB
+    Free Physical memory: 502,85 MB
+    Committed virtual memory: 863,90 MB
     Total swap space: 1,00 GB
     Free swap space: 661,56 MB
-2012-03-29 22:59:59.084+0200: JVM memory information:
+2012-03-29 23:11:30.855+0200: JVM memory information:
     Free  memory: 50,92 MB
     Total memory: 62,44 MB
     Max   memory: 94,44 MB
@@ -38,19 +38,19 @@
     Memory Pool: Par Survivor Space (Heap memory): committed=1,56 MB, used=0,00 B, max=1,56 MB, threshold=?
     Memory Pool: CMS Old Gen (Heap memory): committed=48,00 MB, used=0,00 B, max=80,00 MB, threshold=0,00 B
     Memory Pool: CMS Perm Gen (Non-heap memory): committed=12,00 MB, used=5,92 MB, max=64,00 MB, threshold=0,00 B
-2012-03-29 22:59:59.097+0200: Operating system information:
+2012-03-29 23:11:30.887+0200: Operating system information:
     Operating System: Mac OS X; version: 10.7.2; arch: i386; cpus: 2
     Max number of file descriptors: 10240
     Number of open file descriptors: 65
-    Process id: 54151@Thomas-Reinholdssons-MacBook-Pro.local
+    Process id: 55054@Thomas-Reinholdssons-MacBook-Pro.local
     Byte order: LITTLE_ENDIAN
-2012-03-29 22:59:59.109+0200: JVM information:
+2012-03-29 23:11:31.062+0200: JVM information:
     VM Name: Java HotSpot(TM) Client VM
     VM Vendor: Apple Inc.
     VM Version: 20.4-b02-402
     JIT compiler: HotSpot Client Compiler
     VM Arguments: []
-2012-03-29 22:59:59.110+0200: Java classpath:
+2012-03-29 23:11:31.063+0200: Java classpath:
      [bootstrap] /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/charsets.jar
      [bootstrap] /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/sunrsasign.jar
      [bootstrap] /System/Library/Frameworks/JavaVM.framework/Versions/A/Frameworks/JavaRuntimeSupport.framework/Versions/A/Resources/Java/JavaRuntimeSupport.jar
@@ -93,12 +93,12 @@
      [loader.1] file:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext/sunpkcs11.jar
      [classpath + loader.0] file:/Users/reinholdsson/.python-eggs/neo4j_embedded-1.6-py2.7.egg-tmp/neo4j/javalib/neo4j-graph-matching-1.6.jar
      [classpath + loader.0] file:/Users/reinholdsson/.python-eggs/neo4j_embedded-1.6-py2.7.egg-tmp/neo4j/javalib/scala-library-2.9.0-1.jar
-2012-03-29 22:59:59.114+0200: Library path:
+2012-03-29 23:11:31.069+0200: Library path:
     /Users/reinholdsson/Dropbox/projects/git/neo4j-table-data
     /Library/Java/Extensions
     /System/Library/Java/Extensions
     /usr/lib/java
-2012-03-29 22:59:59.114+0200: System.properties:
+2012-03-29 23:11:31.069+0200: System.properties:
     sun.boot.library.path = /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Libraries
     awt.nativeDoubleBuffering = true
     gopherProxySet = false
@@ -125,7 +125,7 @@
     socksNonProxyHosts = local|*.local|169.254/16|*.169.254/16
     ftp.nonProxyHosts = local|*.local|169.254/16|*.169.254/16
     sun.cpu.isalist = 
-2012-03-29 22:59:59.115+0200: Neo4j Kernel properties:
+2012-03-29 23:11:31.071+0200: Neo4j Kernel properties:
     store_dir=/Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/example/graph.db
     logical_log=/Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/example/graph.db/nioneo_logical.log
     node_auto_indexing=false
@@ -141,7 +141,7 @@
     create=true
     neostore.propertystore.db.mapped_memory=90M
     relationship_auto_indexing=false
-2012-03-29 22:59:59.116+0200: Store versions:
+2012-03-29 23:11:31.072+0200: Store versions:
     NeoStore v0.A.0
     NodeStore v0.A.0
     RelationshipStore v0.A.0
@@ -150,7 +150,7 @@
     PropertyIndexStore v0.A.0
     StringPropertyStore v0.A.0
     ArrayPropertyStore v0.A.0
-2012-03-29 22:59:59.116+0200: Id usage:
+2012-03-29 23:11:31.073+0200: Id usage:
     NodeStore: used=1 high=0
     RelationshipStore: used=0 high=-1
     RelationshipTypeStore: used=0 high=-1
@@ -158,7 +158,7 @@
     PropertyIndexStore: used=0 high=-1
     StringPropertyStore: used=1 high=0
     ArrayPropertyStore: used=1 high=0
-2012-03-29 22:59:59.117+0200: Storage files:
+2012-03-29 23:11:31.073+0200: Storage files:
     active_tx_log: 11,00 B
     index:
       lucene-store.db: 40,00 B
@@ -190,23 +190,23 @@
     nioneo_logical.log.1: 16,00 B
     nioneo_logical.log.active: 4,00 B
     tm_tx_log.1: 0,00 B
-2012-03-29 22:59:59.121+0200: --- STARTUP diagnostics END ---
-2012-03-29 22:59:59.124+0200: Extension org.neo4j.kernel.KernelExtension[kernel udc] loaded ok
-2012-03-29 22:59:59.225+0200: Extension org.neo4j.kernel.KernelExtension[kernel jmx] loaded ok
-2012-03-29 23:00:00.410+0200: Closed log /Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/example/graph.db/nioneo_logical.log
-2012-03-29 23:00:00.468+0200: NeoStore closed
-2012-03-29 23:00:00.555+0200: Closed log /Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/example/graph.db/index/lucene.log
-2012-03-29 23:00:00.555+0200: NeoStore closed
-2012-03-29 23:00:00.555+0200: TM shutting down
-2012-03-29 23:00:03.409+0200: Opened [/Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/example/graph.db/nioneo_logical.log.1] clean empty log, version=0, lastTxId=2
-2012-03-29 23:00:03.507+0200: Opened [/Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/example/graph.db/index/lucene.log.1] clean empty log, version=0, lastTxId=3
-2012-03-29 23:00:03.511+0200: TM opening log: /Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/example/graph.db/tm_tx_log.1
-2012-03-29 23:00:03.601+0200: --- STARTUP diagnostics START ---
-2012-03-29 23:00:03.618+0200: Graph Database: org.neo4j.kernel.EmbeddedGraphDatabase StoreId[time:1333054798401, id:8302341470449700040, store version: 13561656364791302]
-2012-03-29 23:00:03.620+0200: Kernel version: Neo4j - Graph Database Kernel 1.6
-2012-03-29 23:00:03.620+0200: Neo4j component versions:
-2012-03-29 23:00:03.620+0200:   Neo4j - Graph Database Kernel 1.6
-2012-03-29 23:00:03.624+0200: Diagnostics providers:
+2012-03-29 23:11:31.079+0200: --- STARTUP diagnostics END ---
+2012-03-29 23:11:31.086+0200: Extension org.neo4j.kernel.KernelExtension[kernel udc] loaded ok
+2012-03-29 23:11:31.487+0200: Extension org.neo4j.kernel.KernelExtension[kernel jmx] loaded ok
+2012-03-29 23:11:32.350+0200: Closed log /Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/example/graph.db/nioneo_logical.log
+2012-03-29 23:11:32.395+0200: NeoStore closed
+2012-03-29 23:11:32.559+0200: Closed log /Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/example/graph.db/index/lucene.log
+2012-03-29 23:11:32.559+0200: NeoStore closed
+2012-03-29 23:11:32.559+0200: TM shutting down
+2012-03-29 23:11:35.225+0200: Opened [/Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/example/graph.db/nioneo_logical.log.1] clean empty log, version=0, lastTxId=2
+2012-03-29 23:11:35.383+0200: Opened [/Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/example/graph.db/index/lucene.log.1] clean empty log, version=0, lastTxId=3
+2012-03-29 23:11:35.386+0200: TM opening log: /Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/example/graph.db/tm_tx_log.1
+2012-03-29 23:11:35.545+0200: --- STARTUP diagnostics START ---
+2012-03-29 23:11:35.545+0200: Graph Database: org.neo4j.kernel.EmbeddedGraphDatabase StoreId[time:1333055490216, id:439735860994774575, store version: 13561656364791302]
+2012-03-29 23:11:35.546+0200: Kernel version: Neo4j - Graph Database Kernel 1.6
+2012-03-29 23:11:35.546+0200: Neo4j component versions:
+2012-03-29 23:11:35.547+0200:   Neo4j - Graph Database Kernel 1.6
+2012-03-29 23:11:35.548+0200: Diagnostics providers:
     KernelDiagnostics:Versions
     org.neo4j.kernel.info.DiagnosticsManager
     SYSTEM_MEMORY
@@ -220,13 +220,13 @@
     NEO_STORE_VERSIONS
     NEO_STORE_ID_USAGE
     KernelDiagnostics:StoreFiles
-2012-03-29 23:00:03.631+0200: System memory information:
+2012-03-29 23:11:35.619+0200: System memory information:
     Total Physical memory: 6,00 GB
-    Free Physical memory: 771,81 MB
-    Committed virtual memory: 863,90 MB
+    Free Physical memory: 503,75 MB
+    Committed virtual memory: 863,74 MB
     Total swap space: 1,00 GB
     Free swap space: 661,56 MB
-2012-03-29 23:00:03.664+0200: JVM memory information:
+2012-03-29 23:11:35.655+0200: JVM memory information:
     Free  memory: 52,23 MB
     Total memory: 62,44 MB
     Max   memory: 94,44 MB
@@ -237,19 +237,19 @@
     Memory Pool: Par Survivor Space (Heap memory): committed=1,56 MB, used=0,00 B, max=1,56 MB, threshold=?
     Memory Pool: CMS Old Gen (Heap memory): committed=48,00 MB, used=0,00 B, max=80,00 MB, threshold=0,00 B
     Memory Pool: CMS Perm Gen (Non-heap memory): committed=12,00 MB, used=5,94 MB, max=64,00 MB, threshold=0,00 B
-2012-03-29 23:00:03.677+0200: Operating system information:
+2012-03-29 23:11:35.733+0200: Operating system information:
     Operating System: Mac OS X; version: 10.7.2; arch: i386; cpus: 2
     Max number of file descriptors: 10240
     Number of open file descriptors: 65
-    Process id: 54168@Thomas-Reinholdssons-MacBook-Pro.local
+    Process id: 55064@Thomas-Reinholdssons-MacBook-Pro.local
     Byte order: LITTLE_ENDIAN
-2012-03-29 23:00:03.690+0200: JVM information:
+2012-03-29 23:11:35.763+0200: JVM information:
     VM Name: Java HotSpot(TM) Client VM
     VM Vendor: Apple Inc.
     VM Version: 20.4-b02-402
     JIT compiler: HotSpot Client Compiler
     VM Arguments: []
-2012-03-29 23:00:03.691+0200: Java classpath:
+2012-03-29 23:11:35.764+0200: Java classpath:
      [bootstrap] /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/charsets.jar
      [bootstrap] /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/sunrsasign.jar
      [bootstrap] /System/Library/Frameworks/JavaVM.framework/Versions/A/Frameworks/JavaRuntimeSupport.framework/Versions/A/Resources/Java/JavaRuntimeSupport.jar
@@ -292,12 +292,12 @@
      [loader.1] file:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext/sunpkcs11.jar
      [classpath + loader.0] file:/Users/reinholdsson/.python-eggs/neo4j_embedded-1.6-py2.7.egg-tmp/neo4j/javalib/neo4j-graph-matching-1.6.jar
      [classpath + loader.0] file:/Users/reinholdsson/.python-eggs/neo4j_embedded-1.6-py2.7.egg-tmp/neo4j/javalib/scala-library-2.9.0-1.jar
-2012-03-29 23:00:03.695+0200: Library path:
+2012-03-29 23:11:35.767+0200: Library path:
     /Users/reinholdsson/Dropbox/projects/git/neo4j-table-data
     /Library/Java/Extensions
     /System/Library/Java/Extensions
     /usr/lib/java
-2012-03-29 23:00:03.695+0200: System.properties:
+2012-03-29 23:11:35.768+0200: System.properties:
     sun.boot.library.path = /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Libraries
     awt.nativeDoubleBuffering = true
     gopherProxySet = false
@@ -324,7 +324,7 @@
     socksNonProxyHosts = local|*.local|169.254/16|*.169.254/16
     ftp.nonProxyHosts = local|*.local|169.254/16|*.169.254/16
     sun.cpu.isalist = 
-2012-03-29 23:00:03.696+0200: Neo4j Kernel properties:
+2012-03-29 23:11:35.769+0200: Neo4j Kernel properties:
     store_dir=/Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/example/graph.db
     logical_log=/Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/example/graph.db/nioneo_logical.log
     node_auto_indexing=false
@@ -340,7 +340,7 @@
     create=true
     neostore.propertystore.db.mapped_memory=90M
     relationship_auto_indexing=false
-2012-03-29 23:00:03.711+0200: Store versions:
+2012-03-29 23:11:35.770+0200: Store versions:
     NeoStore v0.A.0
     NodeStore v0.A.0
     RelationshipStore v0.A.0
@@ -349,7 +349,7 @@
     PropertyIndexStore v0.A.0
     StringPropertyStore v0.A.0
     ArrayPropertyStore v0.A.0
-2012-03-29 23:00:03.711+0200: Id usage:
+2012-03-29 23:11:35.770+0200: Id usage:
     NodeStore: used=217 high=216
     RelationshipStore: used=0 high=-1
     RelationshipTypeStore: used=0 high=-1
@@ -357,7 +357,7 @@
     PropertyIndexStore: used=3 high=2
     StringPropertyStore: used=1 high=0
     ArrayPropertyStore: used=1 high=0
-2012-03-29 23:00:03.712+0200: Storage files:
+2012-03-29 23:11:35.771+0200: Storage files:
     active_tx_log: 11,00 B
     index:
       lucene:
@@ -406,11 +406,11 @@
     nioneo_logical.log.1: 16,00 B
     nioneo_logical.log.active: 4,00 B
     tm_tx_log.1: 0,00 B
-2012-03-29 23:00:03.719+0200: --- STARTUP diagnostics END ---
-2012-03-29 23:00:03.723+0200: Extension org.neo4j.kernel.KernelExtension[kernel udc] loaded ok
-2012-03-29 23:00:04.142+0200: Extension org.neo4j.kernel.KernelExtension[kernel jmx] loaded ok
-2012-03-29 23:00:54.454+0200: Closed log /Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/example/graph.db/nioneo_logical.log
-2012-03-29 23:00:54.507+0200: NeoStore closed
-2012-03-29 23:00:54.512+0200: Closed log /Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/example/graph.db/index/lucene.log
-2012-03-29 23:00:54.513+0200: NeoStore closed
-2012-03-29 23:00:54.513+0200: TM shutting down
+2012-03-29 23:11:35.784+0200: --- STARTUP diagnostics END ---
+2012-03-29 23:11:35.787+0200: Extension org.neo4j.kernel.KernelExtension[kernel udc] loaded ok
+2012-03-29 23:11:35.930+0200: Extension org.neo4j.kernel.KernelExtension[kernel jmx] loaded ok
+2012-03-29 23:12:27.113+0200: Closed log /Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/example/graph.db/nioneo_logical.log
+2012-03-29 23:12:27.159+0200: NeoStore closed
+2012-03-29 23:12:27.207+0200: Closed log /Users/reinholdsson/Dropbox/projects/git/neo4j-table-data/example/graph.db/index/lucene.log
+2012-03-29 23:12:27.207+0200: NeoStore closed
+2012-03-29 23:12:27.207+0200: TM shutting down
