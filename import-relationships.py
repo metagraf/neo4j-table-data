@@ -125,11 +125,10 @@ def import_relationships(csv_file, db, index):
 					for second_node in second_node_hits:
 						print(' ->' + second_node['name'])
 						first_node.relationships.create('trade_with', second_node, trade=row[3])
-						
-						#Below is necessary if trade is both ways
-						#TODO: add option on whether the relation is both ways 
-						#second_node.relationships.create('trade_with', first_node, trade=row[3])
-						#doesnt work - why?
+
+						# Question: Isnt there a way to make one relationship both ways?
+						#  Instead of creating two relationships
+						second_node.relationships.create('trade_with', first_node, trade=row[3])
 						
 					second_node_hits.close()	
 				first_node_hits.close()					
