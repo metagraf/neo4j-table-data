@@ -7,7 +7,7 @@
 # Updated: 2012-03-28
 
 # DEFAULT OPTIONS
-options = {'input': None, 'output': None}
+options = {'input': 'example/countries.csv', 'output': 'example/test.db', 'id_col': 1}
 
 # HELP TEXT
 help = '''
@@ -41,7 +41,7 @@ def main(options):
 		db = create_database(options['output'])
 		
 		# Import data to neo4j database
-		import_nodes(options['input'], db)
+		import_nodes(options['input'], db, options['id_col'])
 			
 		# Shutdown database
 		db.shutdown()
@@ -96,7 +96,7 @@ def create_database(database_name):
 	
 	return db_obj
 	
-def import_nodes(csv_file, db):
+def import_nodes(csv_file, db, index_col_num):
 	''' Import nodes from CSV to neo4j database '''
 	
 	file_list = csv.reader(open(csv_file, 'rb'), delimiter=';', quotechar='|')
@@ -125,7 +125,6 @@ def import_nodes(csv_file, db):
 						new_node[node_attr_list[col_num]] = row[col_num]
 					
 					# Add the node to the index
-					index_col_num = 0 # first column will be indexed (TODO: Add option)
 					node_idx[node_attr_list[index_col_num]][row[index_col_num]] = new_node
 	
 	# Count number of successfully added nodes

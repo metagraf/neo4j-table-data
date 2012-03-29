@@ -7,7 +7,7 @@
 # Updated: 2012-03-28
 
 # DEFAULT OPTIONS
-options = {'input': 'example/trade.csv', 'output': 'test.db', 'index': 'my_index'}
+options = {'input': 'example/trade.csv', 'output': 'example/test.db', 'index': 'my_index'}
 
 # HELP TEXT
 help = ''' (to be added) '''
@@ -102,19 +102,39 @@ def import_relationships(csv_file, db, index):
 			usage()
 			sys.exit(2)
 		
-		# (Temporary)
-		hits = node_idx['abb']['SWD']
-		for item in hits:
-			print(item)
-			for value in item.values():
-				print(value)
-		hits.close()
-	
-	# Examples (temporary)
-	# steven.relationships.create('mayor_of', poplar_bluff, since="12th of July 2012")
-	# roadRelationship = cityA.road_to(cityB, distance=25)
-	
-	print 'ok'
+		# Options
+		id_col_num = 1
+		rel_col_num = 2
+		index_lookup_attr = 'ccode'
+				
+		# Loop each row to create the nodes
+		for row_id, row in enumerate(file_list): 
+			if row_id == 0: # header row
+				rel_attr_list = [] # create empty attribute list
+				for col in row:
+					rel_attr_list.append(col) # save attribute names from first row		
+			else:
+				
+				#Look for items with the id
+				first_node_hits = node_idx[index_lookup_attr][row[id_col_num]]
+				for first_node in first_node_hits:
+					#print(first_node)
+					print('trade_id: ' + row[0])
+					print(first_node['name'])
+					second_node_hits = node_idx[index_lookup_attr][row[rel_col_num]]
+					for second_node in second_node_hits:
+						print(' ->' + second_node['name'])
+						first_node.relationships.create('trade_with', second_node, trade=row[3])
+						
+						#Below is necessary if trade is both ways
+						#TODO: add option on whether the relation is both ways 
+						#second_node.relationships.create('trade_with', first_node, trade=row[3])
+						#doesnt work - why?
+						
+					second_node_hits.close()	
+				first_node_hits.close()					
+
+	print 'Finished!'
 	
 if __name__ == '__main__':	
 	main(options)
