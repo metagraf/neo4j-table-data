@@ -7,7 +7,7 @@
 # Updated: 2012-03-28
 
 # DEFAULT OPTIONS
-options = {'input': 'example/countries.csv', 'output': 'example/test.db', 'id_col': 1}
+options = {'input': 'example/countries.csv', 'output': 'example/graph.db', 'id_col': 1}
 
 # HELP TEXT
 help = '''

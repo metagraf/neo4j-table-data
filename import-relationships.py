@@ -7,7 +7,7 @@
 # Updated: 2012-03-28
 
 # DEFAULT OPTIONS
-options = {'input': 'example/trade.csv', 'output': 'example/test.db', 'index': 'my_index'}
+options = {'input': 'example/trade.csv', 'output': 'example/graph.db', 'index': 'my_index'}
 
 # HELP TEXT
 help = ''' (to be added) '''
@@ -124,11 +124,11 @@ def import_relationships(csv_file, db, index):
 					second_node_hits = node_idx[index_lookup_attr][row[rel_col_num]]
 					for second_node in second_node_hits:
 						print(' ->' + second_node['name'])
-						first_node.relationships.create('trade_with', second_node, trade=row[3])
+						first_node.relationships.create('trade_with', second_node, trade=row[4])
 
 						# Question: Isnt there a way to make one relationship both ways?
 						#  Instead of creating two relationships
-						second_node.relationships.create('trade_with', first_node, trade=row[3])
+						second_node.relationships.create('trade_with', first_node, trade=row[4])
 						
 					second_node_hits.close()	
 				first_node_hits.close()					
