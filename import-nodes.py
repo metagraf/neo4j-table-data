@@ -4,18 +4,13 @@
 # Author(s): Thomas Reinholdsson <reinholdsson@gmail.com>
 # Info: https://github.com/reinholdsson/neo4j-table-data
 # Created: 2012-03-25
-# Updated: 2012-03-25
+# Updated: 2012-03-28
 
-# OPTIONS (also ok to use command line arguments)
-input = None  # structured data file to read
-output = None # neo4j database folder
+# DEFAULT OPTIONS
+options = {'input': 'example/countries.csv', 'output': 'example/graph.db', 'id_col': 1}
 
-from neo4j import GraphDatabase
-import csv, getopt, sys
-
-def usage():
-	''' Print help/information on how the program is to be used '''
-	print('''
+# HELP TEXT
+help = '''
 =========================================================================
 Help/information
 =========================================================================
@@ -30,49 +25,119 @@ Help/information
 		-h help
 		-v verbose
 =========================================================================
-	''')
+'''
 
-def main(input, output):
-	''' The main method takes care of the option parameters, 
-	for more information on how getopt works 
-	please read http://www.doughellmann.com/PyMOTW/getopt/ '''
+from neo4j import GraphDatabase
+import csv, getopt, sys
+
+def main(options):
+	''' Main program '''	
+
 	try:
-		opts, args = getopt.getopt(sys.argv[1:], "hi:o:v", ["help", "input=","output="])
+		# Add command line parameters if any
+		options = parameters(options)
+		
+		# Create neo4j database
+		db = create_database(options['output'])
+		
+		# Import data to neo4j database
+		import_nodes(options['input'], db, options['id_col'])
+			
+		# Shutdown database
+		db.shutdown()
 	except getopt.GetoptError, err:
-		print str(err) # will print something like "option -a not recognized"
+		print str(err)
+		#pass # handle some exceptions
+	else:
+		return 0 # exit errorlessly
+
+def usage():
+	''' Print help/information on how the program is to be used '''
+
+	print(help)
+
+def parameters(options):
+	''' Check if there are any optional command line parameters '''	
+
+	try:
+		opts, args = getopt.getopt(sys.argv[1:], 'hi:o:v', ['help', 'input=','output='])
+	except getopt.GetoptError, err:
+		print str(err) # will print something like 'option -a not recognized'
 		usage()
 		sys.exit(2)
 	verbose = False
 	for o, a in opts:
-		if o == "-v":
+		if o == '-v':
 			verbose = True
-		elif o in ("-h", "--help"):
+		elif o in ('-h', '--help'):
 			usage()
 			sys.exit()
-		elif o in ("-i", "--input"):
-			input = a
-		elif o in ("-o", "--output"):
-			output = a
+		elif o in ('-i', '--input'):
+			options['input'] = a
+		elif o in ('-o', '--output'):
+			options['output'] = a
 		else:
-			assert False, "unhandled option"
+			assert False, 'unhandled option'
 
-	if input == None or output == None: # requires input and output file
-		print("Options -i and -o are both required, see help below.")
+	if options['input'] == None or options['output'] == None: # requires input and output file
+		print('Options -i and -o are both required, see help below.')
 		usage()
 		sys.exit()
+		
+	return options
+
+def create_database(database_name):	
+	''' Create neo4j database '''
 	
-	# If everything is OK then run program	
-	run(input, output)
+	# TODO: Add db.shutdown() on error (try, except, else)?
 	
-def run(input, output):
-	''' Runs program '''
-	print("Input: " + str(input))
-	print("Output: " + str(output))
+	# Create or open neo4j database
+	db_obj = GraphDatabase(database_name)
 	
-if __name__ == "__main__":
-	''' Constructor; if = runs as script / else = runs as module '''	
-	main(input, output)
-else:
-	pass
+	return db_obj
+	
+def import_nodes(csv_file, db, index_col_num):
+	''' Import nodes from CSV to neo4j database '''
+	
+	file_list = csv.reader(open(csv_file, 'rb'), delimiter=';', quotechar='|')
+	
+	# Count number of nodes (TODO: Option to deactive, might be slow with big data)
+	num_of_nodes = {'before': len(db.nodes)}
+	
+	# We perform changes from within transactions - either write all or none
+	with db.transaction:
+	
+		# Create node index
+		if db.node.indexes.exists('my_index'):
+			node_idx = db.node.indexes.get('my_index')
+		else:
+			node_idx = db.node.indexes.create('my_index')
+
+		# Loop each row to create the nodes
+		for row_id, row in enumerate(file_list): 
+			if row_id == 0: # header row
+				node_attr_list = [] # create empty attribute list
+				for col in row:
+					node_attr_list.append(col) # save attribute names from first row		
+			else:
+					new_node = db.node()
+					for col_num in range(len(node_attr_list)):
+						new_node[node_attr_list[col_num]] = row[col_num]
+					
+					# Add the node to the index
+					node_idx[node_attr_list[index_col_num]][row[index_col_num]] = new_node
+	
+	# Count number of successfully added nodes
+	num_of_nodes['after'] = len(db.nodes)
+	num_of_nodes['added'] = num_of_nodes['after'] - num_of_nodes['before']	
+	
+	# Show results
+	print "### Num of nodes ###\nBefore: %s\nAdded : %s\nAfter : %s"\
+		% (num_of_nodes['before'], num_of_nodes['added'], num_of_nodes['after'])
+
+
+if __name__ == '__main__':	
+	main(options)
+
 
 
